@@ -75,6 +75,10 @@ main {
     max-width: 36rem;
     padding-bottom: var(--spacing-large)
 }
+.close-button {
+  position: sticky;
+  top: 40px
+}
 mo-cta {
     align-self: start;
     background: var(--cta-background);
@@ -108,6 +112,10 @@ mo-footer {
     height: 1rem;
 }
 @media screen and (min-width: 769px) {
+  .close-button {
+    position: sticky;
+    top: 120px
+  }
     main {
         padding-bottom: 120px;
     }
@@ -192,9 +200,9 @@ mo-footer {
       --sec-color: #a9a9a9;
       --third-color: #292929;
       --container-color: #292929;
-      --cta-background: #c9f3ba;
-      --link-color: #c9f3ba;
-      --visited-link: #c9f3ba;
+      --cta-background: #d2cbff;
+      --link-color: #d2cbff;
+      --visited-link: #d2cbff;
     }
 }
 
