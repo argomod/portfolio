@@ -72,7 +72,7 @@ ul {
 /* ELEMENTS */
 main {
     grid-area: content;
-    max-width: 36rem;
+    max-width: 37.5rem;
     padding-bottom: var(--spacing-large)
 }
 .close-button {
@@ -126,10 +126,10 @@ mo-footer {
     }
     mo-footer {
         bottom: 120px;
-        margin: var(--spacing-xlarge) 0;
         max-width: 16rem;
         padding-bottom: 0px;
         position: sticky;
+        z-index: -1
     }
 }
 
@@ -162,15 +162,15 @@ mo-footer {
 }
 /* Font sizes */
 :root {
-    --large-font-size: 1.24rem;
-    --body-font-size: 1.05rem;
-    --small-font-size: .85rem;
+    --large-font-size: 1.25rem;
+    --body-font-size: 1.125rem;
+    --small-font-size: .875rem;
 }
 @media only screen and (min-width: 769px) {
     :root {
-        --large-font-size: 1.375rem;
-        --body-font-size: 1.125rem;
-        --small-font-size: 0.875rem;
+        --large-font-size: 1.5rem;
+        --body-font-size: 1.25rem;
+        --small-font-size: 1rem;
     }
 }
 /* Spacing */
