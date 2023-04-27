@@ -123,13 +123,13 @@ mo-footer {
         max-width: 16rem;
         position: sticky;
         top: 120px;
+        z-index: 1
     }
     mo-footer {
         bottom: 120px;
         max-width: 16rem;
         padding-bottom: 0px;
         position: sticky;
-        z-index: -1
     }
 }
 
