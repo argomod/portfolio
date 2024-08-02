@@ -32,8 +32,8 @@ body {
 h1, h2, h3, .bold-text {
     font-family: 'NB International Bold', sans-serif
 }
-p:not(:last-child), h2, h1 {
-    margin-bottom: var(--spacing-xsmall)
+p:not(:last-child), h2, h1, li:not(:last-child) {
+    margin-bottom: var(--spacing-xsmall) !important
 }
 a {
     border-bottom: 2px solid var(--link-color);
@@ -244,10 +244,13 @@ mo-footer {
     box-sizing: border-box;
   }
   /*
-    2. Remove default margin
+    2. Remove default margins
   */
   * {
     margin: 0;
+  }
+  ol {
+    padding-inline-start: 1em
   }
   /*
     3. Allow percentage-based heights in the application
