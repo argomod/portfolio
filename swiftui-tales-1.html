@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SwiftUI Tales 1 - MattArgo.com</title>
+    <title>Swift Tales 1 - MattArgo.com</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-
     <script defer src="cta.js"></script>
     <script defer src="footer.js"></script>
-
   </head>
 
 <body>
@@ -31,50 +29,58 @@
 
 
 <h1 class="large-text bold-text spacing-medium-top">SwiftUI Tales 1</h1>       
-<p class="sec-text spacing-medium-top">July 2024 — This is part one of the story of how I and the TPL (Times Product Language) team
-    built an iOS version of the TPL design system, all without knowing SwiftUI and without a dedicated iOS engineer.
-</p>
+<p class="sec-text spacing-medium-top">July 2024 — This is the first installment of how I contributed to building the Times Product Language (TPL) design system for iOS.</p>
+<p class="sec-text">The TPL team is me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes, Jac Saik, Norel Hassan, and Dan Mall.</p>
+<p class="sec-text">We began by learning the basics of SwiftUI and then transforming our tokens for color, typography, and spacing.</p>
 
 
-<h2 class="bold-text spacing-medium-top">That pesky question</h2>
+<h2 class="bold-text spacing-medium-top">Humble beginnings</h2>
 <p>"Should designers code?”</p>
 
-<p>I learned SwiftUI the same way Joe and Sergio did. We spent many hours studying, practicing, and rigorously iterating on our work to ship things worthwhile to our customers and NYT readers. The difference in our outcomes I think offers some insight into the question.</p>
+<p>The pesky question gained new meaning when my team was asked to spend 2024 making iOS components. We weren’t iOS engineers nor had we formally made anything in SwiftUI or UIKit, Apple’s most modern coding languages.</p>
 
-<p>I’m not as good at making the source code efficient for production. That’s probably not surprising, but I’ll remind you, I’ve been coding as my “secret sauce” for 8 years. What matters is that coding hasn’t been my proper job for that whole time. Joe and Sergio are experienced as engineers—able to connect the dots between coding languages incredibly fast.
-</p>
+<p>To answer the question: On the one hand, no; designers often work in nebulous circumstances where the right skills vary. But in that moment I remember feeling absurdly fortunate; how rare it is to see the right opportunity, even an uncertain one, so clearly. Yes—<em>this</em> designer was going to learn to make stuff in iOS.</p>
 
-<p>But as a designer I connect different dots very well: </p>
+<p>So I learned the same way our engineers Joe and Sergio did. We spent many hours Googling, practicing, and rigorously iterating our work. I spent much time outside of work studying, for which I thank my spouse Madison. <a href="https://developer.apple.com/swift-playgrounds/">Swift Playgrounds</a> in particular hooked me.</p>
 
-<ol class="spacing-xsmall-bottom">
-    <li>At the prototyping phase (very beginning), where I need to balance design requirements and engineering feasibility</li>
-    <li>At the polish phase (very end), where I need to make documentation and code comments feel like a cohesive product.</li>
+<p>Despite the same effort, I developed strengths that were different from those of Joe and Sergio. As deeply experienced engineers, they were excellent at making source code efficient for production by applying their wisdom from other languages.</p>
+
+<p>But as a designer, I connect different dots very well:</p>
+
+<ol class="spacing-small-bottom">
+    <li>At the <span class="bold-text">prototyping</span> phase (very beginning), where I need to balance design requirements and engineering feasibility.</li>
+    <li>At the <span class="bold-text">polish</span> phase (very end), where I need to make documentation and code comments feel like a cohesive product (see Swift Tales 3 for an example).</li>
 </ol>
 
-<p>I also test with VoiceOver and Dynamic Type and add accessibility code anytime.</p>
+<p>On top of that, I learned to test VoiceOver and Dynamic Type and can now write code enhancements for accessibility.</p>
 
-<p class="sec-text center-text">[image]</p>
+<img class="selected-work-image" src="./assets/swift-tales-1-1.png" />
+<img class="selected-work-image" src="./assets/swift-tales-1-2.png" />
+<img class="selected-work-image" src="./assets/swift-tales-1-3.png" />
+
 
 
 <h2 class="bold-text spacing-medium-top">Line height</h2>
-<p>The journey to translate typographic line height between web, iOS, and Figma highlights my role nicely. I personally think line height is a special detail that makes visual design shine (designer alert!). I really wanted to get it right across all of the platforms.</p>
-<p>Our design system uses JSON to store a single source of truth for basic decision decisions across web, iOS, and Figma. That means ideally one value can either be directly injected into our code base or easily translated to work with a platform’s preferred convention. I needed to decide what value makes most sense to store line height in our JSON.</p>
-<p>In web, line height is expressed in any unit accepted in CSS; unitless numbers are most accessible. In Figma, line height is expressed in either an integer or percentage.</p>
+<p>The journey to translate line height (the space between lines of text) to iOS highlights how I connect dots at the <span class="bold-text">prototyping</span> phase.</p>
+<p>I feel line height is a special detail that makes visuals shine (designer alert!), so I was motivated to make it correct across all of our supported platforms.</p>
+<p>Our design system uses JSON to store a single source of truth for basic design decisions. Ideally, one value can be directly injected into our code or conveniently translated to work with a platform’s preferred convention. My responsibility was to decide what integer makes the most sense to represent line height in TPL’s JSON repository.</p>
+<p>On web, line height can be expressed in any unit accepted in CSS; <a href="https://allthingssmitty.com/2017/01/30/nope-nope-nope-line-height-is-unitless/">unitless numbers are most accessible</a>. In Figma, line height is expressed either in pixels or as a percentage.</p>
 <p class="sec-text center-text">[image]</p>
-<p>With Xcode I learned SwiftUI also takes an integer… but using the number Figma produced was way off. What’s happening here?</p>
+<p>I used Xcode to study how line height is set in <a href="https://developer.apple.com/documentation/swiftui/view/linespacing(_:)">SwiftUI</a> and <a href="https://developer.apple.com/documentation/uikit/nsmutableparagraphstyle/1528742-linespacing">UIKit</a>, called lineSpacing. I learned lineSpacing also takes an integer… but using the number that Figma produced was way off. What’s happening here?</p>
 <p class="sec-text center-text">[image]</p>
-<p>SwiftUI’s line height is similar to pixels in Figma and web, but the integer starts with the font size. Or mathematically the formula I developed (and we now use as a JSON transform) is:</p>
+<p>iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts with the font size. For example: A lineSpacing value of 0 applied to a font size of 16pt yields a 16pt line height, and a lineSpacing value of 2 applied to a font size of 18pt yields a 20pt line height. With this knowledge, Joe and I decided to store a percentage in JSON and then translate it to an integer in iOS with the following formula I created:</p>
 <p class="sec-text center-text">[image]</p>
-<p>One consequence I didn’t realize until later is that it’s impossible to provide a line height less than 100% of the font size; that isn’t common in practice, but one of our condensed fonts was affected. I had to use FontForge to adjust the metrics manually.</p>
-<p>But an even bigger problem emerged: how SwiftUI distributes line height.</p>
-<p>While web and Figma evenly distributes space above and below a line of text, Apple places space only in between lines of text.</p>
+<p>Interestingly I discovered it’s impossible to provide a lineSpacing value less than 0, or 100% of the font size. This isn’t common in practice, but alas, one of our condensed fonts used less than 100% on web. When I brought this up to my new iOS engineering friends I was aghast (and amused) to learn that for 10 years(!) this particular font was culturally known to be a pain and “impossible to fix”. Once again I felt so fortunate. My journey had led me to uncover a problem engineers had been dealing with for years, and one I uniquely had the skill and patience to fix. I used FontForge to adjust the metrics manually, tested it in Xcode, and together we shipped the fixed font file to production.</p>
 <p class="sec-text center-text">[image]</p>
-<p>Yes,this is why our designs in Figma always have spacing issues around text! Joe and I call this the “half-leading problem”, to which we have not attempted a programmatic fix but alert our customets to.</p>
+<p>But an even bigger problem emerged: how iOS distributes line height around the text.</p>
+<p>While web and Figma equally split line height above and below a line of text, Apple places space only in-between lines of text. Yes, this is why our designs in Figma always have spacing issues around text! Joe and I call this the “half-leading problem”.</p>
+<p class="sec-text center-text">[image]</p>
+<p>By now, you know how much I care about line height. But I now had hard-earned wisdom I didn’t before. While I may have asked my engineers to “fix this” in the past, I knew this was a simple problem with no simple solution. I decided not to attempt a programmatic fix to stay within our scope and meet our deadline.</p>
 
 
 <h2 class="bold-text spacing-medium-top">Summary</h2>
-<p>I and the TPL team learned how to produce color, font size, font weight, and spacing in SwiftUI and then used our combined platform knowledge to distribute 100% of our design tokens across all supported platforms (which by our definition now includes Figma). In total this took 1.5 months.</p>
-<p>Next time we’ll dive into some components!</p>
+<p>In 1.5 months I, Joe, and Sergio learned the basics of coding in iOS and distributed 100% of our JSON library of color, typography, and spacing tokens for use in SwiftUI. I used my new Xcode prototyping skills to solve problems quickly and to balance design requirements with engineering feasibility.</p>
+<p>In the next installment, we’ll dive into our first iOS components!</p>
 
 
 </main>

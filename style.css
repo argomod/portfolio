@@ -85,7 +85,7 @@ mo-cta {
     border-radius: .8rem;
     color: var(--font-color);
     grid-area: cta;
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--spacing-medium);
     padding: 1.5em;
     font-size: var(--small-font-size)
 }
@@ -110,6 +110,9 @@ mo-footer {
 .button svg {
     fill: var(--background-color);
     height: 1rem;
+}
+.selected-work-image {
+  border-radius: 3px
 }
 @media screen and (min-width: 769px) {
   .close-button {
@@ -151,6 +154,7 @@ mo-footer {
 .spacing-large-bottom { margin-bottom: var(--spacing-large) !important }
 .no-bullet { list-style-type: none; padding-inline-start: 0px !important }
 .no-underline { border-bottom: 0px }
+.prim-text { color: var(--font-color) }
 .sec-text { color: var(--sec-color) }
 
 
@@ -162,13 +166,13 @@ mo-footer {
 }
 /* Font sizes */
 :root {
-    --large-font-size: 1.25rem;
+    --large-font-size: 1.5rem;
     --body-font-size: 1.125rem;
     --small-font-size: .875rem;
 }
 @media only screen and (min-width: 769px) {
     :root {
-        --large-font-size: 1.5rem;
+        --large-font-size: 1.625rem;
         --body-font-size: 1.25rem;
         --small-font-size: 1rem;
     }

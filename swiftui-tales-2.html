@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SwiftUI Tales 2 - MattArgo.com</title>
+    <title>Swift Tales 2 - MattArgo.com</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
@@ -31,7 +31,7 @@
 
 
 <h1 class="large-text bold-text spacing-medium-top">SwiftUI Tales 2</h1>       
-<p class="sec-text spacing-medium-top">July 2024 — In these next installments I’ll chronologically talk about each iOS component we shipped. And as it so happens, our first component code named “context menu” may be the most illuminating.</p>
+<p class="sec-text spacing-medium-top">July 2024 — In the next installments I’ll chronologically talk about the two iOS components we shipped in TPL. The first was code-named “context menu”.</p>
 
 
 <h2 class="bold-text spacing-medium-top">Team and timeline</h2>
@@ -41,34 +41,34 @@
 <h2 class="bold-text spacing-medium-top">Punk</h2>
 <p>When Dan Mall started working with the team he encouraged us designers to find ways to work as close to engineering as possible.</p>
 
-<p>Until then my style of engineering collaboration was punk—sneaking around expectations to use my engineering knowledge to form cross-discipline friendships and make cool stuff happen.</p>
+<p>Until then my style of engineering collaboration was punk—sneaking around expectations to use my coding knowledge to form cross-discipline friendships and make cool stuff happen.</p>
 
-<p>But without the expectation of staying in my lane, in what new ways could I be punk? I thought: If I really wanted to get close to code, what if I abandoned Figma, the defacto tool for “designers”, altogether?</p>
+<p>But without the expectation of staying in my lane, in what new ways could I be punk? I thought: If I wanted to get close to code, what if I set aside Figma, the defacto tool for “designers”, altogether?</p>
 
 <h2 class="bold-text spacing-medium-top">Collaboration</h2>
-<p>That means I needed help from Joe and Sergio from the get-go. This is the main stuff:</p>
+<p>I needed help from Joe and Sergio from the get-go. This is the main stuff they helped me learn:</p>
 
-<ul class="spacing-xsmall-bottom">
-    <li>Xcode: <span class="sec-text">Set up a simple preview environment, connect to the iOS-TPL repo, get rid of errors</span></li>
-    <li>GitHub: <span class="sec-text">Get auth tokens, connect to NYT repo, commit, fetch, pull, push</span></li>
-    <li>Tower: <span class="sec-text">Save myself from Terminal</span></li>
-    <li>SwiftUI basics: <span class="sec-text">Where to look for help online, how to use our ios-TPL tokens</li>
-    <span>Jetpack Compose: <span class="sec-text">While Android is not a supported library yet, I wanted to at least see how everything might come together one day</span></li>
+<ul class="spacing-small-bottom">
+    <li>Xcode: Set up a simple preview environment, connect to the iOS-TPL repository, get rid of errors</li>
+    <li>GitHub: Get auth tokens, connect to the NYT repository, commit, fetch, pull, push</li>
+    <li>Tower: Save myself from Terminal <a href="https://www.git-tower.com/">(learn more about Tower here)</a></li>
+    <li>SwiftUI basics: How to use our iOS-TPL tokens and who at NYT to ask for advice</li>
+    <li>Jetpack Compose: While Android is not a supported library yet, I wanted to at least picture how everything might come together one day</li>
 </ul>
 
-<p>Once I could do stuff on my own though, I still wanted to hang with Joe and Sergio. Dan calls this way of working “hot potato”, where 2-3 independent contribtors pass the work between each other live. This was a really fast way to vet ideas and to observe engineering life. Engineers are my customers at the end of the day.</p>
+<p>But once I could work independently, I still wanted to hang with Joe and Sergio. Dan calls this way of collaborating “hot potato”, where 2-3 independent contributors pass the work between each other live. This was a speedy way to vet ideas and observe engineering life. Engineers are TPL customers at the end of the day.</p>
 
-<p>But they’re not my only customers. The Brand team may be on the opposite end of the spectrum. Brand must sign off on all of our work, and I honestly like it that way. Not just because they’re awesome people, but because we all want our stuff to look and feel excellent across the Times.</p>
+<p>But they’re not my only customers. I also serve the Brand team, and they may be on the opposite end of the spectrum. Brand must sign off on all of my work, which I honestly love. Not just because they’re awesome people, but because we all want our stuff to look and feel excellent across the Times.</p>
 
 <p>The way I see it, my role as a design/eng hybrid is to convince Brand and Engineering that they want the same things. And my role as an accessibility subject matter expert is to build something that works for everyone.</p>
 
 <p>In the case of context menu, however, little compromise could be had.</p>
 
 
-<h2 class="bold-text spacing-medium-top">Iteration</h2>
-<p>Okay, maybe I’m a tad clairvoyant. I knew Brand would prefer a fully custom popover menu. I did too.</p>
+<h2 class="bold-text spacing-medium-top">Prototypes</h2>
+<p>Okay, maybe I’m a tad clairvoyant. I knew Brand would prefer a fully custom popover menu.( I did too.)</p>
 
-<p>But what I learned very quickly with Joe and Sergio is that in iOS, anything that requires dynamic positioning based on screen bounds is exceptionally difficult in SwiftUI. In our case, context menu should orient itself either below or above the ellipsis if depending on screen space.</p>
+<p>But through prototyping in Xcode, I learned that anything that requires dynamic positioning based on screen bounds is exceptionally troublesome in SwiftUI. Because context menu should orient itself either below or above a button depending on screen space, I was in a bind.</p>
 
 <p class="sec-text center-text">[image]</p>
 
@@ -76,36 +76,38 @@
 
 <p class="sec-text center-text">[image]</p>
 
-<p>Joe felt strongly that within our timeline, building something custom wasn’t feasible. He also rightly brought up the further cost of maintaining something potentially fragile and complicated especially when SwiftUI already provides a very similar component: Menu. (And it’s SO easy to use).</p>
+<p>Joe felt strongly that, within our timeline, building something custom wasn’t feasible. He also pointed out the future cost of maintaining something potentially fragile and complicated especially when SwiftUI already provides a very similar component: Menu. (And it’s SO easy to use).</p>
 
-<p>Here started a philosophy we now generally try to stick to:</p>
+<p>This is how I helped develop a philosophy the TPL team now tries to stick to:</p>
 
 <ol class="spacing-small-bottom">
-<li>Dig in the SwiftUI docs for solutions first (and create a prototype).</li>
+<li>Dig into the SwiftUI docs for solutions (and create a prototype).</li>
 <li>Test how much can be customized and review with the Brand team (and create a prototype).</li>
-<li>If that fails, quickly gauge how difficult it is to go full custom and review with Brand and iOS Engineers (and create a prototype).</li>
+<li>If that fails, quickly gauge how difficult it is to go full custom and review it with Brand and iOS engineers (and create a prototype).</li>
 <li>Either agree on visual design compromise and lean toward SwiftUI conventions or communicate the time and cost of going full custom and go forth (and create many more prototypes).</li>
 </ol>
 
-<p>I love prototypes!</p>
+<p>I love prototypes.</p>
 
-<p>Even though I found that the only detail we could adjust was the icons used (which we agreed to avoid using anyway), showing the sheer magnitude of the time and effort to go full custom through a prototype was enough to convince the brand team.</p>
+<p>I created an example of a SwiftUI Menu and discovered that the only detail we could adjust were the icons next to the text (which, after reviewing with Brand, we hoped to avoid using anyway). Next, I attempted a fully custom version which required 340 lines of code. Showing Brand the sheer magnitude of the time and effort to go full custom was enough to convince them to stick to Apple’s native Menu.</p>
 
-<p>Reviewing our decision with iOS engineers was very reassuring. I think they were surprised by how quickly and confidently we all agreed that sticking to Apple convention was the right choice.</p>
+<p class="sec-text center-text">[image]</p>
+
+<p>Reviewing our decision with iOS engineers was very reassuring. I think they were relieved by how creatively and harmoniously we all agreed that sticking to Apple convention was the right choice.</p>
 
 
 <h2 class="bold-text spacing-medium-top">Summary</h2>
 <p>We built nothing!</p>
 
-<p>Instead, with Brand’s approval, we encourage TPL customers to use SwiftUI Menu.</p>
+<p>Instead, with Brand’s approval, we now encourage TPL customers to use Apple’s native Menu in SwiftUI and UIKit.</p>
 
-<p>In total I made [x] prototypes. Along the way I learned a ton about GeometryReader and alignment guides, both of which eventually became useful knowledge for future components.</p>
+<p>I made 7 prototypes. I learned a ton about GeometryReader and alignment guides along the way, both of which eventually became useful knowledge for future components.</p>
 
-<p>Yes, I did use Figma to sketch some ideas. I’m a punk, not a masochist! Plus we needed to offer a component for designers. I pretty much recreated Apple’s.</p>
+<p>Yes. I did use Figma to sketch some ideas. I’m a punk, not a masochist! Plus we needed to offer a component for designers. I pretty much recreated Apple’s.</p>
 
 <p class="sec-text center-text">[image]</p>
 
-<p>But when I reflect on this project, I find it hard to think where Figma would’ve been the best tool. I’ve been thinking a lot about my past years feeling I needed to "break the rules" to work with code. Maybe the punk way was the best way all along.</p>
+<p>But when I reflect on this project, I find it hard to think where else Figma would’ve been the best tool. I’ve been thinking a lot about my past years feeling I needed to "break the rules" to work with code. Maybe the punk way was the best way all along.</p>
 
 </main>
 
