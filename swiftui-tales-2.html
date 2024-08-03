@@ -51,7 +51,7 @@
 <ul class="spacing-small-bottom">
     <li>Xcode: Set up a simple preview environment, connect to the iOS-TPL repository, get rid of errors</li>
     <li>GitHub: Get auth tokens, connect to the NYT repository, commit, fetch, pull, push</li>
-    <li>Tower: Save myself from Terminal <a href="https://www.git-tower.com/">(learn more about Tower here)</a></li>
+    <li><a href="https://www.git-tower.com/">Tower</a>: Save myself from Terminal</li>
     <li>SwiftUI basics: How to use our iOS-TPL tokens and who at NYT to ask for advice</li>
     <li>Jetpack Compose: While Android is not a supported library yet, I wanted to at least picture how everything might come together one day</li>
 </ul>
@@ -68,17 +68,14 @@
 <h2 class="bold-text spacing-medium-top">Prototypes</h2>
 <p>Okay, maybe I’m a tad clairvoyant. I knew Brand would prefer a fully custom popover menu. ( I did too.)</p>
 
-<p>But through prototyping in Xcode, I learned that anything that requires dynamic positioning based on screen bounds is exceptionally troublesome in SwiftUI. Because context menu should orient itself either below or above a button depending on screen space, I was in a bind.</p>
+<p>But through prototyping in Xcode, I learned that anything that requires dynamic positioning based on screen bounds is exceptionally troublesome in SwiftUI. For example, unlike web, I found SwiftUI tends to have stricter parent/child relationship rules. Because context menu needs to orient itself based on plethora factors (e.g. proximity to the element that produces it, overlaying on top of the whole screen), I was in a bind.</p>
 
-<p class="sec-text center-text">[image]</p>
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-1.png" />
+<p class="sec-text small-text spacing-small-bottom">An example of z index on the web (left) and in SwiftUI (right) with the same parent child relationships. SwiftUI does not override the parent.</p>
 
-<p>Why is it so difficult? SwiftUI cannot tell you the height and width of a screen*. The only data we could gather are x/y coordinates and the height/width of the context menu.</p>
+<p>Joe felt strongly that, within our timeline, building something custom wasn’t feasible. He also pointed out the future cost of maintaining something potentially fragile and complicated especially when SwiftUI already provides a very similar component, <a href="https://developer.apple.com/documentation/swiftui/menu/">Menu</a>. (And it’s so easy to use).</p>
 
-<p class="sec-text center-text">[image]</p>
-
-<p>Joe felt strongly that, within our timeline, building something custom wasn’t feasible. He also pointed out the future cost of maintaining something potentially fragile and complicated especially when SwiftUI already provides a very similar component: Menu. (And it’s SO easy to use).</p>
-
-<p>This is how I helped develop a philosophy the TPL team now tries to stick to:</p>
+<p>Through this experience, I helped develop a philosophy the TPL team now tries to stick to:</p>
 
 <ol class="spacing-small-bottom">
 <li>Dig into the SwiftUI docs for solutions (and create a prototype).</li>
@@ -89,9 +86,15 @@
 
 <p>I love prototypes.</p>
 
-<p>I created an example of a SwiftUI Menu and discovered that the only detail we could adjust were the icons next to the text (which, after reviewing with Brand, we hoped to avoid using anyway). Next, I attempted a fully custom version which required 340 lines of code. Showing Brand the sheer magnitude of the time and effort to go full custom was enough to convince them to stick to Apple’s native Menu.</p>
+<p>I created an example of a SwiftUI Menu and discovered that the only detail we could adjust were optional icons next to the text (which, after reviewing with Brand, we hoped to avoid using anyway).</p>
 
-<p class="sec-text center-text">[image]</p>
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-2.png" />
+<p class="sec-text small-text spacing-small-bottom">A SwiftUI menu triggered by an icon-only button.</p>
+  
+<p>Next, I attempted a fully custom version which required 340 lines of code. Showing Brand the sheer magnitude of the time and effort to go full custom was enough to convince them to stick to Apple’s native Menu.</p>
+
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-3.png" />
+<p class="sec-text small-text spacing-small-bottom">A custom context menu that uses GeometryReader and .fullScreenCover to automatically avoid positioning the menu off the screen.</p>
 
 <p>Reviewing our decision with iOS engineers was very reassuring. I think they were relieved by how creatively and harmoniously we all agreed that sticking to Apple convention was the right choice.</p>
 
@@ -103,9 +106,10 @@
 
 <p>I made 7 prototypes. I learned a ton about GeometryReader and alignment guides along the way, both of which eventually became useful knowledge for future components.</p>
 
-<p>Yes. I did use Figma to sketch some ideas. I’m a punk, not a masochist! Plus we needed to offer a component for designers. I pretty much recreated Apple’s.</p>
+<p>Yes. I did use Figma to sketch some ideas. I’m a punk, not a masochist! Plus, of course, we needed to offer a nice component for designers.</p>
 
-<p class="sec-text center-text">[image]</p>
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-4.png" />
+<p class="sec-text small-text spacing-small-bottom">In Figma, an Apple Menu component in with a variant for more list items and a hidden list item subcomponent with a "destructive" red variant.</p>
 
 <p>But when I reflect on this project, I find it hard to think where else Figma would’ve been the best tool. I’ve been thinking a lot about my past years feeling I needed to "break the rules" to work with code. Maybe the punk way was the best way all along.</p>
 
