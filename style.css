@@ -33,7 +33,7 @@ h1, h2, h3, .bold-text {
     font-family: 'NB International Bold', sans-serif
 }
 p:not(:last-child), h2, h1, li:not(:last-child) {
-    margin-bottom: var(--spacing-xsmall) !important
+    margin-bottom: var(--spacing-xsmall)
 }
 a {
     border-bottom: 2px solid var(--link-color);
@@ -112,6 +112,11 @@ mo-footer {
     height: 1rem;
 }
 .selected-work-image {
+  border-radius: 3px
+}
+.call-out-container {
+  background-color: var(--container-color);
+  padding: 16px;
   border-radius: 3px
 }
 @media screen and (min-width: 769px) {
@@ -300,4 +305,20 @@ mo-footer {
   */
   #root, #__next {
     isolation: isolate;
+  }
+
+
+
+
+  .test {
+
+  line-height: 1.2; /* Scales with font size */
+  line-height: 1.2em; /* Scales with font size */
+  line-height: 120%; /* Scales with font size */
+  line-height: 24px; /* Does not scale */
+
+
+
+
+
   }

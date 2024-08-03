@@ -28,10 +28,15 @@
 </a>
 
 
-<h1 class="large-text bold-text spacing-medium-top">SwiftUI Tales 1</h1>       
+
+
+<h1 class="large-text bold-text spacing-medium-top">Swift Tales 1</h1> 
+
 <p class="sec-text spacing-medium-top">July 2024 — This is the first installment of how I contributed to building the Times Product Language (TPL) design system for iOS.</p>
-<p class="sec-text">The TPL team is me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes, Jac Saik, Norel Hassan, and Dan Mall.</p>
-<p class="sec-text">We began by learning the basics of SwiftUI and then transforming our tokens for color, typography, and spacing.</p>
+
+<p class="sec-text">The TPL team is me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes, Jac Saik, Norel Hassan, and Dan Mall. We began by learning the basics of SwiftUI and then transforming our tokens for color, typography, and spacing.</p>
+
+
 
 
 <h2 class="bold-text spacing-medium-top">Humble beginnings</h2>
@@ -54,27 +59,53 @@
 
 <p>On top of that, I learned to test VoiceOver and Dynamic Type and can now write code enhancements for accessibility.</p>
 
-<img class="selected-work-image" src="./assets/swift-tales-1-1.png" />
-<img class="selected-work-image" src="./assets/swift-tales-1-2.png" />
-<img class="selected-work-image" src="./assets/swift-tales-1-3.png" />
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-1.png" />
+<p class="sec-text small-text spacing-small-bottom">Prototype that demos a technique for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order for VoiceOver and keyboard users.</p>
+
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-2.png" />
+<p class="sec-text small-text spacing-small-bottom">Step-by-step tutorial explaining how to implement a component along with code samples and an image preview.</p>
+
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-3.png" />
+<p class="sec-text small-text spacing-small-bottom">Screenshot of VoiceOver testing.</p>
+
 
 
 
 <h2 class="bold-text spacing-medium-top">Line height</h2>
+
 <p>The journey to translate line height (the space between lines of text) to iOS highlights how I connect dots at the <span class="bold-text">prototyping</span> phase.</p>
+
 <p>I feel line height is a special detail that makes visuals shine (designer alert!), so I was motivated to make it correct across all of our supported platforms.</p>
+
 <p>Our design system uses JSON to store a single source of truth for basic design decisions. Ideally, one value can be directly injected into our code or conveniently translated to work with a platform’s preferred convention. My responsibility was to decide what integer makes the most sense to represent line height in TPL’s JSON repository.</p>
+
 <p>On web, line height can be expressed in any unit accepted in CSS; <a href="https://allthingssmitty.com/2017/01/30/nope-nope-nope-line-height-is-unitless/">unitless numbers are most accessible</a>. In Figma, line height is expressed either in pixels or as a percentage.</p>
-<p class="sec-text center-text">[image]</p>
+
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-4.png" />
+<p class="sec-text small-text spacing-small-bottom">Examples of how to set line height in Figma and web.</p>
+
 <p>I used Xcode to study how line height is set in <a href="https://developer.apple.com/documentation/swiftui/view/linespacing(_:)">SwiftUI</a> and <a href="https://developer.apple.com/documentation/uikit/nsmutableparagraphstyle/1528742-linespacing">UIKit</a>, called lineSpacing. I learned lineSpacing also takes an integer… but using the number that Figma produced was way off. What’s happening here?</p>
-<p class="sec-text center-text">[image]</p>
+
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-5.png" />
+<p class="sec-text small-text spacing-small-bottom">Figma depeicted on the left and Xcode on the right. lineSpacing in SwiftUI is much taller.</p>
+
 <p>iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts with the font size. For example: A lineSpacing value of 0 applied to a font size of 16pt yields a 16pt line height, and a lineSpacing value of 2 applied to a font size of 18pt yields a 20pt line height. With this knowledge, Joe and I decided to store a percentage in JSON and then translate it to an integer in iOS with the following formula I created:</p>
+
+<div class="call-out-container spacing spacing-small-top spacing-small-bottom"><p class="bold-text center-text small-text">lineSpacing = font size - (font size * percentage)</p></div>
+
+<p class="spacing-xsmall-top">Interestingly I discovered it’s impossible to provide a lineSpacing value less than 0, or 100% of the font size. This isn’t common in practice, but alas, one of The New York Times's condensed fonts used less than 100% on web. When I brought this up to my new iOS engineering friends I was aghast (and amused) to learn that for 10 years (!) this particular font was culturally known to be a pain and “impossible to fix”. </p>
+  
+<p>But how fortunate again. My journey had led me to uncover a problem engineers had been dealing with for years, and one I uniquely had the skill and patience to fix. I used FontForge to adjust the metrics manually, tested it in Xcode, and together we shipped the fixed font file to production.</p>
+
 <p class="sec-text center-text">[image]</p>
-<p>Interestingly I discovered it’s impossible to provide a lineSpacing value less than 0, or 100% of the font size. This isn’t common in practice, but alas, one of our condensed fonts used less than 100% on web. When I brought this up to my new iOS engineering friends I was aghast (and amused) to learn that for 10 years(!) this particular font was culturally known to be a pain and “impossible to fix”. Once again I felt so fortunate. My journey had led me to uncover a problem engineers had been dealing with for years, and one I uniquely had the skill and patience to fix. I used FontForge to adjust the metrics manually, tested it in Xcode, and together we shipped the fixed font file to production.</p>
-<p class="sec-text center-text">[image]</p>
-<p>But an even bigger problem emerged: how iOS distributes line height around the text.</p>
+
+<p>I found another strage problem in how iOS distributes line height around text.</p>
+
 <p>While web and Figma equally split line height above and below a line of text, Apple places space only in-between lines of text. Yes, this is why our designs in Figma always have spacing issues around text! Joe and I call this the “half-leading problem”.</p>
-<p class="sec-text center-text">[image]</p>
+
+<img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-6.png" />
+<p class="sec-text small-text spacing-small-bottom">Figma overlaid on Xcode. The green line is the difference between the two, which equals half of linSpacing in SwiftUI.</p>
+
 <p>By now, you know how much I care about line height. But I now had hard-earned wisdom I didn’t before. While I may have asked my engineers to “fix this” in the past, I knew this was a simple problem with no simple solution. I decided not to attempt a programmatic fix to stay within our scope and meet our deadline.</p>
 
 
