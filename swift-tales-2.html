@@ -22,7 +22,8 @@
 
     <!-- Title -->
     <h1 class="large-text bold-text spacing-medium-top">Swift Tales 2</h1>
-    <p class="sec-text spacing-medium-top">July 2024 — In the next installments I’ll chronologically talk about the two new iOS components we shipped in TPL. This first was a popover menu we called “context menu”.</p>
+    <p class="sec-text spacing-medium-top">July 2024 — In the next installments I’ll chronologically talk about the two
+      new iOS components we shipped in TPL. This first was a popover menu we called “context menu”.</p>
 
 
     <!-- Team and timeline -->
@@ -50,17 +51,19 @@
     <ul class="spacing-small-bottom">
       <li>Xcode: Set up a simple preview environment, connect to the iOS-TPL repository, get rid of errors</li>
       <li>GitHub: Get auth tokens, connect to the NYT repository, commit, fetch, pull, push</li>
-      <li><a href="https://www.git-tower.com/">Tower</a>: Save myself from Terminal</li>
+      <li><a href="https://www.git-tower.com/" target="_blank">Tower</a>: Save myself from Terminal</li>
       <li>SwiftUI basics: How to use our iOS-TPL tokens and who at NYT to ask for advice</li>
       <li>Jetpack Compose: While Android is not a supported library yet, I wanted to at least picture how everything
         might come together one day</li>
     </ul>
 
     <p>But once I could get stuff done on my own, I still wanted to work with Joe and Sergio. Dan calls this way of
-      collaborating “hot potato”, where 2-3 independent contributors pass the work between each other synchronously. This was a
+      collaborating “hot potato”, where 2-3 independent contributors pass the work between each other synchronously.
+      This was a
       speedy way to vet ideas and observe engineering life. Engineers are TPL customers at the end of the day.</p>
 
-    <p>But they’re not my only customers. I also serve the Brand team. Brand must sign off on all of my work, which I honestly love. Not just because they’re awesome people,
+    <p>But they’re not my only customers. I also serve the Brand team. Brand must sign off on all of my work, which I
+      honestly love. Not just because they’re awesome people,
       but because we all want our stuff to look and feel excellent across the Times.</p>
 
     <p>The way I see it, my role as a design/eng hybrid is to convince Brand and Engineering that they want the same
@@ -79,13 +82,14 @@
       proximity to the element that produces it, overlaying on top of the whole screen), I was in a bind.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-1.png" alt="An example of z index on the web (left) and in SwiftUI (right)
-    with the same parent child relationships. SwiftUI does not override the parent."/>
+    with the same parent child relationships. SwiftUI does not override the parent." />
     <p class="sec-text small-text spacing-small-bottom">An example of z index on the web (left) and in SwiftUI (right)
       with the same parent child relationships. SwiftUI does not override the parent.</p>
 
-    <p class="spacing-small-top">Joe felt strongly that, within our timeline, building something custom wasn’t feasible. He also pointed out the
+    <p class="spacing-small-top">Joe felt strongly that, within our timeline, building something custom wasn’t feasible.
+      He also pointed out the
       future cost of maintaining something potentially fragile and complicated especially when SwiftUI already provides
-      a very similar component, <a href="https://developer.apple.com/documentation/swiftui/menu/">Menu</a>. (And it’s so
+      a very similar component, <a href="https://developer.apple.com/documentation/swiftui/menu/" target="_blank">Menu</a>. (And it’s so
       easy to use).</p>
 
     <p>Through this experience I helped develop a philosophy the TPL team now tries to stick to:</p>
@@ -104,18 +108,24 @@
     <p>I created an example of a SwiftUI Menu and discovered that the only detail we could adjust were optional icons
       next to the text (which, after reviewing with Brand, we hoped to avoid using anyway).</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-2.png" alt="A SwiftUI menu triggered by an icon-only button."/>
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A SwiftUI menu triggered by an icon-only button.</p>
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-2.png"
+      alt="A SwiftUI menu triggered by an icon-only button." />
+    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A SwiftUI menu triggered by an icon-only
+      button.</p>
 
-    <p class="spacing-small-top">Next, I attempted a fully custom version which required 340 lines of code (<a href="https://github.com/argomod/ios-prototypes-2024">see the prototype in GitHub</a>). Showing Brand the sheer magnitude of
+    <p class="spacing-small-top">Next, I attempted a fully custom version which required 340 lines of code (<a
+        href="https://github.com/argomod/ios-prototypes-2024" target="_blank">see the prototype in GitHub</a>). Showing Brand the sheer
+      magnitude of
       the time and effort to go full custom was enough to convince them to stick to Apple’s native Menu.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-3.png" alt="A custom context menu that uses GeometryReader and
-    .fullScreenCover to automatically avoid positioning the menu off the screen."/>
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A custom context menu that uses GeometryReader and
+    .fullScreenCover to automatically avoid positioning the menu off the screen." />
+    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A custom context menu that uses
+      GeometryReader and
       .fullScreenCover to automatically avoid positioning the menu off the screen.</p>
 
-    <p class="spacing-small-top">Reviewing our decision with iOS engineers was very reassuring. I think they were relieved by how creatively and
+    <p class="spacing-small-top">Reviewing our decision with iOS engineers was very reassuring. I think they were
+      relieved by how creatively and
       harmoniously we all agreed that sticking to Apple convention was the right choice.</p>
 
 
@@ -133,11 +143,13 @@
       nice component for designers.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-4.png" alt="An Apple Menu component in Figma with a variant for more
-    list items and a hidden list item subcomponent with a destructive red variant."/>
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">An Apple Menu component in Figma with a variant for more
+    list items and a hidden list item subcomponent with a destructive red variant." />
+    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">An Apple Menu component in Figma with a
+      variant for more
       list items and a hidden list item subcomponent with a destructive red variant.</p>
 
-    <p class="spacing-small-top">But when I reflect on this project, I find it hard to think where else Figma would’ve been the best tool. I’ve
+    <p class="spacing-small-top">But when I reflect on this project, I find it hard to think where else Figma would’ve
+      been the best tool. I’ve
       been thinking a lot about my past years feeling I needed to "break the rules" to work with code. Maybe the punk
       way was the best way all along.</p>
 
