@@ -83,23 +83,23 @@
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-1.png"
       alt="An example of z index on the web (left) and in SwiftUI (right) with the same parent child relationships. SwiftUI does not override the parent." />
     <p class="sec-text small-text spacing-small-bottom">An example of z index on the web (left) and in SwiftUI (right)
-      with the same parent child relationships. SwiftUI does not override the parent.</p>
+      with the same parent/child relationships. SwiftUI does not override the parent.</p>
 
-    <p class="spacing-small-top">Joe felt strongly that, within our timeline, building something custom wasn’t feasible.
+    <p class="spacing-small-top">Joe felt strongly that within our timeline building something custom wasn’t feasible.
       He also pointed out the future cost of maintaining something potentially fragile and complicated especially when
       SwiftUI already provides a very similar component, <a
         href="https://developer.apple.com/documentation/swiftui/menu/" target="_blank">Menu</a>. (And it’s so easy to
       use).</p>
 
-    <p>Through this experience I helped develop a philosophy the TPL team now tries to stick to:</p>
+    <p>Through this experience, I helped develop a philosophy the TPL team now tries to stick to:</p>
 
     <ol class="spacing-small-bottom">
-      <li>Dig into the SwiftUI docs for solutions (and create a prototype).</li>
-      <li>Test how much can be customized and review with the Brand team (and create a prototype).</li>
+      <li>Dig into the SwiftUI docs for solutions (and create a prototype)</li>
+      <li>Test how much can be customized and review with the Brand team (and create a prototype)</li>
       <li>If that fails, quickly gauge how difficult it is to go full custom and review it with Brand and iOS engineers
-        (and create a prototype).</li>
-      <li>Either agree on visual design compromise and lean toward SwiftUI conventions or communicate the time and cost
-        of going full custom and go forth (and create many more prototypes).</li>
+        (and create a prototype)</li>
+      <li>Either agree on visual design compromises and lean toward SwiftUI conventions or communicate the time and cost
+        of going fully custom (and create many more prototypes)</li>
     </ol>
 
     <p>As you can tell, I love prototypes.</p>
@@ -113,14 +113,14 @@
       button.</p>
 
     <p class="spacing-small-top">Next, I attempted a fully custom version which required 340 lines of code (<a
-        href="https://github.com/argomod/ios-prototypes-2024" target="_blank">see the prototype in GitHub</a>). Showing
-      Brand the sheer magnitude of the time and effort to go full custom was enough to convince them to stick to Apple’s
-      native Menu.</p>
+        href="https://github.com/argomod/ios-prototypes-2024/blob/main/Prototypes2024/CustomContextMenu.swift"
+        target="_blank">see the prototype in GitHub</a>). Showing Brand the sheer magnitude of the time and effort to go
+      fully custom was enough to convince them to stick to Apple’s native Menu.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-3.png"
       alt="A custom context menu that uses GeometryReader and .fullScreenCover to automatically avoid positioning the menu off the screen." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A custom context menu that uses
-      GeometryReader and .fullScreenCover to automatically avoid positioning the menu off the screen.</p>
+      GeometryReader and .fullScreenCover to automatically avoid positioning context menu off the screen.</p>
 
     <p class="spacing-small-top">Reviewing our decision with iOS engineers was very reassuring. I think they were
       relieved by how creatively and harmoniously we all agreed that sticking to Apple convention was the right choice.
@@ -129,13 +129,11 @@
 
     <!-- Summary -->
     <h2 class="bold-text spacing-medium-top">Summary</h2>
-    <p>We built nothing!</p>
-
-    <p>Instead, with Brand’s approval, we now encourage TPL customers to use Apple’s native Menu in SwiftUI and UIKit.
-    </p>
-
     <p>I made 7 prototypes. I learned a ton about GeometryReader and alignment guides along the way, both of which
       eventually became useful knowledge for future components.</p>
+
+    <p>We built no custom components! Instead, with Brand’s approval, we now encourage TPL customers to use Apple’s
+      native Menu in SwiftUI and UIKit.</p>
 
     <p>Yes. I did use Figma to sketch some ideas. I’m a punk, not a masochist! Plus, of course, we needed to offer a
       nice component for designers.</p>
