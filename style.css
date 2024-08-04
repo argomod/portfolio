@@ -120,6 +120,12 @@ footer {
   top: 40px
 }
 
+.close-button:active,
+.close-button:focus {
+  outline-offset: 0.125rem;
+  border-radius: 1000px
+}
+
 @media screen and (min-width: 769px) {
   .close-button {
     position: sticky;
@@ -135,11 +141,31 @@ footer {
 
 .currently-item {
   color: var(--background-color) !important;
-  background: var(--cta-background);
   border-radius: .8rem;
   color: var(--font-color);
   padding: 1em;
   font-size: var(--small-font-size)
+}
+
+a.currently-item {
+  border-bottom: 0px;
+}
+
+.currently-item-1 {
+  background: var(--curently-item-1)
+}
+
+.currently-item-2 {
+  background: var(--curently-item-2)
+}
+
+.currently-item-3 {
+  background: var(--curently-item-3)
+}
+
+a.currently-item:active,
+a.currently-item:focus {
+  outline-offset: 0.125rem;
 }
 
 .button {
@@ -276,26 +302,29 @@ footer {
 /* Colors */
 :root {
   --background-color: #fbfbfb;
-  --background-color-2: #f1f1f1;
+  --curently-item-1: #F64E28;
+  --curently-item-2: #7D9EC9;
+  --curently-item-3: #CB836D;
   --font-color: #222222;
   --sec-color: #6A6A6A;
   --third-color: #ececec;
   --container-color: #dcdcdc;
-  --cta-background: #4e5219;
-  --link-color: #4e5219;
-  --visited-link: #4e5219;
+  --link-color: #30445f;
+  --visited-link: #30445f;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #000000;
+    --background-color: #0C0C0C;
+    --curently-item-1: #947F5C;
+    --curently-item-2: #698096;
+    --curently-item-3: #837D57;
     --font-color: #f5f5f5;
     --sec-color: #a9a9a9;
     --third-color: #292929;
     --container-color: #292929;
-    --cta-background: #d2cbff;
-    --link-color: #d2cbff;
-    --visited-link: #d2cbff;
+    --link-color: #a3aa82;
+    --visited-link: #a3aa82;
   }
 }
 

@@ -4,26 +4,24 @@ class footer extends HTMLElement {
         this.innerHTML = `
         <footer>
             <div class="currently-container spacing-medium-bottom">
-                <a class="currently-item" href="https://youtu.be/Kp4wg9qWtmk?feature=shared" target="_blank">
-                    Watching <span aria-hidden="true">→</span>
+                <a class="currently-item currently-item-1" href="https://www.ourpaleolife.com/rustic-landscape-timber-trail-stairs/" target="_blank">
+                    What I'm making <span aria-hidden="true">→</span>
                 </a>
-                <a class="currently-item" href="https://youtu.be/Kp4wg9qWtmk?feature=shared" target="_blank">
-                    Studying <span aria-hidden="true">→</span>
+                <a class="currently-item currently-item-2" href="https://terremoto.la/" target="_blank">
+                    What I'm studying <span aria-hidden="true">→</span>
                 </a>
-                <a class="currently-item" href="https://youtu.be/Kp4wg9qWtmk?feature=shared" target="_blank">
-                    Listening to <span aria-hidden="true">→</span>
+                <a class="currently-item currently-item-3" href="https://youtu.be/0rFVVzavii0?feature=shared" target="_blank">
+                    What I'm listening to <span aria-hidden="true">→</span>
                 </a>
             </div>
             <div>
             <p class="bold-text">Thank you for visiting.</p>
                 <ul class="spacing-small-top no-bullet">
                     <li class="spacing-xsmall-bottom"><a href="mailto:mattargomaniz@gmail.com">Send me an email.</a></li>
-                     <li class="spacing-xsmall-bottom"><a target="_blank" href="https://margomaniz.tumblr.com/">Lurk on my Tumblr.</a></li>
                      <li><a target="_blank" href="https://github.com/argomod">View my code on GitHub.</a></li>
                 </ul>
 
             </div>
-
         </footer>
         `
     }
