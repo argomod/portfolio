@@ -22,7 +22,7 @@
 
     <!-- Title -->
     <h1 class="large-text bold-text spacing-medium-top">Swift Tales 2</h1>
-    <p class="sec-text spacing-medium-top">July 2024 — In the next installments I’ll chronologically talk about the two
+    <p class="sec-text spacing-medium-top">July 2024 — In the next installments, I’ll chronologically talk about the two
       new iOS components we shipped in TPL. This first was a popover menu we called “context menu”.</p>
 
 
@@ -34,7 +34,7 @@
 
     <!-- Punk -->
     <h2 class="bold-text spacing-medium-top">Punk</h2>
-    <p>When Dan Mall started working with the team he encouraged us designers to find ways to work as close to
+    <p>When Dan Mall started working with the team, he encouraged us designers to find ways to work as close to
       engineering as possible.</p>
 
     <p>Until then my style of engineering collaboration was punk—sneaking around expectations to use my coding knowledge
@@ -59,12 +59,12 @@
 
     <p>But once I could get stuff done on my own, I still wanted to work with Joe and Sergio. Dan calls this way of
       collaborating “hot potato”, where 2-3 independent contributors pass the work between each other synchronously.
-      This was a
-      speedy way to vet ideas and observe engineering life. Engineers are TPL customers at the end of the day.</p>
+      This was a speedy way to vet ideas and observe engineering life. Engineers are TPL customers at the end of the
+      day.</p>
 
     <p>But they’re not my only customers. I also serve the Brand team. Brand must sign off on all of my work, which I
-      honestly love. Not just because they’re awesome people,
-      but because we all want our stuff to look and feel excellent across the Times.</p>
+      honestly love. Not just because they’re awesome people, but also because designers and engineers alike want our
+      stuff to look and feel excellent across the Times.</p>
 
     <p>The way I see it, my role as a design/eng hybrid is to convince Brand and Engineering that they want the same
       things. And my role as an accessibility subject matter expert is to build something that works for everyone.</p>
@@ -77,20 +77,20 @@
     <p>Okay, maybe I’m a tad clairvoyant. I knew Brand would prefer a fully custom popover menu. (I did too.)</p>
 
     <p>But through prototyping in Xcode, I learned that anything that requires dynamic positioning based on screen
-      bounds is exceptionally troublesome in SwiftUI. For example, unlike web, I found SwiftUI tends to have stricter
-      parent/child relationship rules. Because context menu needs to orient itself based on plethora factors (e.g.
-      proximity to the element that produces it, overlaying on top of the whole screen), I was in a bind.</p>
+      bounds is troublesome in SwiftUI. Unlike web, SwiftUI has stricter parent/child
+      relationship rules. That made it challenging to program context menu to act as expected, for example, orienting itself
+      in proximity to the element that produces it and overlaying on top of the entire screen. I was in a bind.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-1.png" alt="An example of z index on the web (left) and in SwiftUI (right)
-    with the same parent child relationships. SwiftUI does not override the parent." />
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-1.png"
+      alt="An example of z index on the web (left) and in SwiftUI (right) with the same parent child relationships. SwiftUI does not override the parent." />
     <p class="sec-text small-text spacing-small-bottom">An example of z index on the web (left) and in SwiftUI (right)
       with the same parent child relationships. SwiftUI does not override the parent.</p>
 
     <p class="spacing-small-top">Joe felt strongly that, within our timeline, building something custom wasn’t feasible.
-      He also pointed out the
-      future cost of maintaining something potentially fragile and complicated especially when SwiftUI already provides
-      a very similar component, <a href="https://developer.apple.com/documentation/swiftui/menu/" target="_blank">Menu</a>. (And it’s so
-      easy to use).</p>
+      He also pointed out the future cost of maintaining something potentially fragile and complicated especially when
+      SwiftUI already provides a very similar component, <a
+        href="https://developer.apple.com/documentation/swiftui/menu/" target="_blank">Menu</a>. (And it’s so easy to
+      use).</p>
 
     <p>Through this experience I helped develop a philosophy the TPL team now tries to stick to:</p>
 
@@ -114,19 +114,18 @@
       button.</p>
 
     <p class="spacing-small-top">Next, I attempted a fully custom version which required 340 lines of code (<a
-        href="https://github.com/argomod/ios-prototypes-2024" target="_blank">see the prototype in GitHub</a>). Showing Brand the sheer
-      magnitude of
-      the time and effort to go full custom was enough to convince them to stick to Apple’s native Menu.</p>
+        href="https://github.com/argomod/ios-prototypes-2024" target="_blank">see the prototype in GitHub</a>). Showing
+      Brand the sheer magnitude of the time and effort to go full custom was enough to convince them to stick to Apple’s
+      native Menu.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-3.png" alt="A custom context menu that uses GeometryReader and
-    .fullScreenCover to automatically avoid positioning the menu off the screen." />
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-3.png"
+      alt="A custom context menu that uses GeometryReader and .fullScreenCover to automatically avoid positioning the menu off the screen." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A custom context menu that uses
-      GeometryReader and
-      .fullScreenCover to automatically avoid positioning the menu off the screen.</p>
+      GeometryReader and .fullScreenCover to automatically avoid positioning the menu off the screen.</p>
 
     <p class="spacing-small-top">Reviewing our decision with iOS engineers was very reassuring. I think they were
-      relieved by how creatively and
-      harmoniously we all agreed that sticking to Apple convention was the right choice.</p>
+      relieved by how creatively and harmoniously we all agreed that sticking to Apple convention was the right choice.
+    </p>
 
 
     <!-- Summary -->
@@ -142,16 +141,14 @@
     <p>Yes. I did use Figma to sketch some ideas. I’m a punk, not a masochist! Plus, of course, we needed to offer a
       nice component for designers.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-4.png" alt="An Apple Menu component in Figma with a variant for more
-    list items and a hidden list item subcomponent with a destructive red variant." />
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-4.png"
+      alt="An Apple Menu component in Figma with a variant for more list items and a hidden list item subcomponent with a destructive red variant." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">An Apple Menu component in Figma with a
-      variant for more
-      list items and a hidden list item subcomponent with a destructive red variant.</p>
+      variant for more list items and a hidden list item subcomponent with a destructive red variant.</p>
 
     <p class="spacing-small-top">But when I reflect on this project, I find it hard to think where else Figma would’ve
-      been the best tool. I’ve
-      been thinking a lot about my past years feeling I needed to "break the rules" to work with code. Maybe the punk
-      way was the best way all along.</p>
+      been the best tool. I’ve been thinking a lot about my past years feeling I needed to "break the rules" to work
+      with code. Maybe the punk way was the best way all along.</p>
 
   </main>
 

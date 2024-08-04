@@ -37,11 +37,14 @@
     <p>"Should designers code?”</p>
 
     <p>That pesky question hit me differently when the TPL team was asked to spend 2024 making iOS components. We
-      weren’t iOS engineers nor had we formally made anything in SwiftUI or UIKit, Apple’s most modern coding languages.</p>
+      weren’t iOS engineers nor had we formally made anything in SwiftUI or UIKit, Apple’s most modern coding languages.
+    </p>
 
     <p>To answer: On the one hand, no; designers work in nebulous circumstances where the right
-      skills can vary. But in that moment, oddly enough, I remember feeling absurdly fortunate. How rare it is to see the
-      right opportunity, even an uncertain one, so clearly. Yes—<em>this</em> designer was going to learn to make stuff in
+      skills can vary. But in that moment, oddly enough, I remember feeling absurdly fortunate. How rare it is to see
+      the
+      right opportunity, even an uncertain one, so clearly. Yes—<em>this</em> designer was going to learn to make stuff
+      in
       iOS.</p>
 
     <p>So I learned the same way our engineers Joe and Sergio did. We spent many hours Googling, practicing, and
@@ -57,7 +60,8 @@
 
     <ol class="spacing-small-bottom">
       <li>At the <span class="bold-text">prototyping</span> phase, where I need to balance design
-        requirements and engineering feasibility (<a href="https://github.com/argomod/ios-prototypes-2024" target="_blank">see my latest iOS prototypes in GitHub</a>.)</li>
+        requirements and engineering feasibility (<a href="https://github.com/argomod/ios-prototypes-2024"
+          target="_blank">see my latest iOS prototypes in GitHub</a>.)</li>
       <li>At the <span class="bold-text">polish</span> phase, where I need to make documentation and code
         comments feel like a cohesive product (<a href="./swift-tales-3.html">see Swift Tales 3</a> for an example).
       </li>
@@ -68,18 +72,19 @@
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-1.png"
       alt="Prototyping — A prototype that demos a technique for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order for VoiceOver and keyboard users." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Prototyping — A prototype that I made to dems a
-      technique for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order for VoiceOver and keyboard users.</p>
+    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Prototyping — A prototype that I made to dems
+      a technique for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order
+      for VoiceOver and keyboard users.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-2.png"
       alt="Polish — A step-by-step tutorial explaining how to implement a component along with code samples and a preview." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Polish — A step-by-step tutorial I made to explain
-      how to implement a component along with code samples and a preview.</p>
+    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Polish — A step-by-step tutorial I made to
+      explain how to implement a component along with code samples and a preview.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-3.png" alt="Accessibility — A screen recording of a
-    prototype with VoiceOver that I sent to Joe and Sergio to demo an accessibility technique" />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Accessibility — A VoiceOver screen recording of a
-      prototype that I made that I sent to Joe and Sergio to demo an accessibility technique.</p>
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-3.png"
+      alt="Accessibility — A screen recording of a prototype with VoiceOver that I sent to Joe and Sergio to demo an accessibility technique" />
+    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Accessibility — A VoiceOver screen recording
+      of a prototype that I made that I sent to Joe and Sergio to demo an accessibility technique.</p>
 
 
     <!-- Line height -->
@@ -97,7 +102,8 @@
     </p>
 
     <p>On web, line height can be expressed in any unit accepted in CSS; <a
-        href="https://allthingssmitty.com/2017/01/30/nope-nope-nope-line-height-is-unitless/" target="_blank">unitless numbers are most
+        href="https://allthingssmitty.com/2017/01/30/nope-nope-nope-line-height-is-unitless/" target="_blank">unitless
+        numbers are most
         accessible</a>. In Figma, line height is expressed either in pixels or as a percentage.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-4.png" alt="A few examples of how to set line height in Figma
@@ -111,21 +117,18 @@
       called lineSpacing. I learned lineSpacing also takes an integer… but using the number that Figma produced was way
       off. What’s happening here?</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-5.png" alt="A line height prototype with Figma depicted
-    on the left and
-    Xcode on the right. lineSpacing
-    in SwiftUI is much taller." />
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-5.png"
+      alt="A line height prototype with Figma depicted on the left and Xcode on the right. lineSpacing in SwiftUI is much taller." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A line height prototype with Figma depicted
-      on the left and
-      Xcode on the right. lineSpacing
-      in SwiftUI is much taller.</p>
+      on the left and Xcode on the right. lineSpacing in SwiftUI is much taller.</p>
 
-    <p class="spacing-small-top">iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts with the font size. For
-      example, a lineSpacing value of 0 applied to a font size of 16pt yields a 16pt line height, and a lineSpacing
+    <p class="spacing-small-top">iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts
+      with the font size. For example, a lineSpacing value of 0 applied to a font size of 16pt yields a 16pt line
+      height, and a lineSpacing
       value of 2 applied to a font size of 18pt yields a 20pt line height.</p>
 
-    <p>With this knowledge, Joe and I decided to
-      store a percentage in JSON and then translate it to an integer in iOS with the following formula I created:</p>
+    <p>With this knowledge, Joe and I decided to store a percentage in JSON and then translate it to an integer in iOS
+      with the following formula I created:</p>
 
     <div class="call-out-container spacing spacing-small-top spacing-small-bottom">
       <p class="center-text">lineSpacing = font size - (font size * percentage)</p>
@@ -133,22 +136,17 @@
 
     <p class="spacing-xsmall-top">Interestingly I discovered it’s impossible to provide a lineSpacing value less than 0,
       or 100% of the font size. This isn’t common in practice, but alas, one of The New York Times's condensed fonts
-      used less than 100% on web. When I brought this up to my new iOS engineering friends I was aghast to
+      used less than 100% on web. When I brought this up to my new iOS engineering friends, I was aghast to
       learn that for 10 years (!) this particular font was culturally known to be a pain and “impossible to fix”. </p>
 
-    <p>But how fortunate again I felt again. My journey had led me to find a problem that annoyed engineers for years,
+    <p>But how fortunate I felt again. My journey had led me to find a problem that annoyed engineers for years,
       and one I uniquely had the skill and patience to fix. Over 2 days I used FontForge to adjust the metrics manually,
-      tested it
-      in Xcode, and together we shipped the fixed font file to production.</p>
+      tested it in Xcode, and together we shipped the fixed font file to production.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-6.png" alt="A diagram breaking down font metrics by using
-    screenshots from
-    Xcode and
-    Font Forge." />
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-6.png"
+      alt="A diagram breaking down font metrics by using screenshots from Xcode and Font Forge." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A diagram breaking down font metrics by using
-      screenshots from
-      Xcode and
-      Font Forge.</p>
+      screenshots from Xcode and Font Forge.</p>
 
     <p class="spacing-small-top">I found another strange problem in how iOS distributes line height around text.</p>
 
@@ -156,26 +154,22 @@
       lines of text. Yes, this is why our designs have spacing issues around text after handoff! Joe and I call this
       the “half-leading problem”.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-7.png" alt="A prototype shwoing Figma overlaid on Xcode.
-    The green line is
-    the difference
-    between the two, which equals half of lineSpacing in SwiftUI." />
+    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-7.png"
+      alt="A prototype shwoing Figma overlaid on Xcode. The green line is the difference between the two, which equals half of lineSpacing in SwiftUI." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A prototype showing Figma overlaid on Xcode.
-      The green line is
-      the difference
-      between the two, which equals half of lineSpacing in SwiftUI.</p>
+      The green line is the difference between the two, which equals half of lineSpacing in SwiftUI.</p>
 
-    <p class="spacing-small-top">By now, you know how much I care about line height. But I also now have new hard-earned wisdom. While I may
-      have asked my engineers to “fix this” in the past, this was a simple problem with no simple solution. We
-      decided not to attempt a programmatic fix to stay within scope and meet our deadline.</p>
+    <p class="spacing-small-top">By now, you know how much I care about line height. But I also now have new hard-earned
+      wisdom. While I may have asked my engineers to “fix this” in the past, this was a simple problem with no simple
+      solution. We decided not to attempt a programmatic fix to stay within scope and meet our deadline.</p>
 
 
     <!-- Summary -->
     <h2 class="bold-text spacing-medium-top">Summary</h2>
-    <p>In 1.5 months I, Joe, and Sergio learned the basics of coding in iOS and distributed 100% of our JSON library of
+    <p>In 1.5 months, I, Joe, and Sergio learned the basics of coding in iOS and distributed 100% of our JSON library of
       color, typography, and spacing tokens for use in SwiftUI. I used my new Xcode prototyping skills to solve problems
       quickly and to balance design requirements with engineering feasibility.</p>
-    <p>In the <a href="./swift-tales-2.html">next installment</a>, we’ll dive into our first iOS components!</p>
+    <p>In the <a href="./swift-tales-2.html">next installment</a>, we’ll dive into our first iOS component!</p>
 
   </main>
 
