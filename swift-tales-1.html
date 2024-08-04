@@ -106,10 +106,10 @@
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-4.png" alt="A few examples of how to set line height in Figma
     and web." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A few examples of how to set line height in Figma
+    <p aria-hidden="true" class="sec-text small-text">A few examples of how to set line height in Figma
       and web.</p>
 
-    <p>I used Xcode to study how line height is set in <a
+    <p class="spacing-small-top">I used Xcode to study how line height is set in <a
         href="https://developer.apple.com/documentation/swiftui/view/linespacing(_:)">SwiftUI</a> and <a
         href="https://developer.apple.com/documentation/uikit/nsmutableparagraphstyle/1528742-linespacing">UIKit</a>,
       called lineSpacing. I learned lineSpacing also takes an integer… but using the number that Figma produced was way
@@ -124,7 +124,7 @@
       Xcode on the right. lineSpacing
       in SwiftUI is much taller.</p>
 
-    <p>iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts with the font size. For
+    <p class="spacing-small-top">iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts with the font size. For
       example, a lineSpacing value of 0 applied to a font size of 16pt yields a 16pt line height, and a lineSpacing
       value of 2 applied to a font size of 18pt yields a 20pt line height.</p>
 
@@ -154,7 +154,7 @@
       Xcode and
       Font Forge.</p>
 
-    <p>I found another strange problem in how iOS distributes line height around text.</p>
+    <p class="spacing-small-top">I found another strange problem in how iOS distributes line height around text.</p>
 
     <p>While web and Figma equally split line height above and below a line of text, Apple places space only in-between
       lines of text. Yes, this is why our designs have spacing issues around text after handoff! Joe and I call this
@@ -169,7 +169,7 @@
       the difference
       between the two, which equals half of lineSpacing in SwiftUI.</p>
 
-    <p>By now, you know how much I care about line height. But I also now have new hard-earned wisdom. While I may
+    <p class="spacing-small-top">By now, you know how much I care about line height. But I also now have new hard-earned wisdom. While I may
       have asked my engineers to “fix this” in the past, this was a simple problem with no simple solution. We
       decided not to attempt a programmatic fix to stay within scope and meet our deadline.</p>
 
