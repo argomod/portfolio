@@ -119,11 +119,9 @@ footer {
   position: sticky;
   top: 40px
 }
-
-.close-button:active,
-.close-button:focus {
+.close-button a:active,
+.close-button a:focus {
   outline-offset: 0.125rem;
-  border-radius: 1000px
 }
 
 @media screen and (min-width: 769px) {
