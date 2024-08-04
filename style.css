@@ -39,7 +39,7 @@ p:not(:last-child),
 h2,
 h1,
 li:not(:last-child) {
-  margin-bottom: var(--spacing-xsmall)
+  margin-bottom: var(--spacing-xsmall) !important
 }
 
 a {
