@@ -133,13 +133,13 @@ footer {
   }
 }
 
-.currently-container {
+.interest-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xxsmall)
 }
 
-.currently-item {
+.interest-item {
   color: var(--background-color) !important;
   border-radius: .8rem;
   color: var(--font-color);
@@ -147,24 +147,24 @@ footer {
   font-size: var(--small-font-size)
 }
 
-a.currently-item {
+a.interest-item {
   border-bottom: 0px;
 }
 
-.currently-item-1 {
+.interest-item-1 {
   background: var(--curently-item-1)
 }
 
-.currently-item-2 {
+.interest-item-2 {
   background: var(--curently-item-2)
 }
 
-.currently-item-3 {
+.interest-item-3 {
   background: var(--curently-item-3)
 }
 
-a.currently-item:active,
-a.currently-item:focus {
+a.interest-item:active,
+a.interest-item:focus {
   outline-offset: 0.125rem;
 }
 
@@ -309,22 +309,22 @@ a.currently-item:focus {
   --sec-color: #6A6A6A;
   --third-color: #ececec;
   --container-color: #dcdcdc;
-  --link-color: #30445f;
-  --visited-link: #30445f;
+  --link-color: #355278;
+  --visited-link: #355278;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0C0C0C;
-    --curently-item-1: #947F5C;
-    --curently-item-2: #698096;
-    --curently-item-3: #837D57;
+    --curently-item-1: #B7B39A;
+    --curently-item-2: #7F7685;
+    --curently-item-3: #7D8F97;
     --font-color: #f5f5f5;
     --sec-color: #a9a9a9;
     --third-color: #292929;
     --container-color: #292929;
-    --link-color: #a3aa82;
-    --visited-link: #a3aa82;
+    --link-color: #8ba3ae;
+    --visited-link: #8ba3ae;
   }
 }
 
@@ -430,48 +430,3 @@ h6 {
 #__next {
   isolation: isolate;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .currently a {
-  color: var(--background-color) !important;
-} */
-
-
-
-
-/* mo-cta {
-  align-self: start;
-  background: var(--cta-background);
-  border-radius: .8rem;
-  color: var(--font-color);
-  grid-area: cta;
-  margin-bottom: var(--spacing-medium);
-  padding: 1.5em;
-  font-size: var(--small-font-size)
-}
-
-mo-cta a {
-  color: var(--background-color) !important;
-}
-
-mo-cta a:focus {
-  outline: 0.125rem solid var(--background-color);
-} */
