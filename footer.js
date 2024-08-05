@@ -16,10 +16,12 @@ class footer extends HTMLElement {
             </div>
             <div>
             <p class="bold-text">Thank you for visiting.</p>
-                <ul class="spacing-small-top no-bullet">
+                <ul class="spacing-xsmall-top no-bullet">
                     <li class="spacing-xsmall-bottom"><a href="mailto:mattargomaniz@gmail.com">Send me an email.</a></li>
                      <li><a target="_blank" href="https://github.com/argomod">View my code on GitHub.</a></li>
                 </ul>
+               <p class="spacing-medium-top small-text sec-text">Site updated August 2024.</p>
+
 
             </div>
         </footer>
