@@ -1,3 +1,18 @@
+/*
+
+1rem * (-x)
+
+16*(-x)= 120
+x= 7.5
+
+24*(-x) = 80
+x= 3.33
+
+
+
+*/
+
+
 /* GLOBAL STYLES */
 body {
   background: var(--background-color);
@@ -97,20 +112,23 @@ main {
 
 mo-footer {
   grid-area: footer;
+  margin-top: -120px
 }
 
 footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: var(--spacing-large)
+  padding: calc(0.125rem*2);
+  padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 @media screen and (min-width: 769px) {
   footer {
     position: sticky;
-    top: 120px;
-    height: calc(100vh - 120px - 120px);
+    height: 100vh;
+    top: 0px;
     max-width: 16rem;
     overflow: scroll;
   }
