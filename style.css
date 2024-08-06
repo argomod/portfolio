@@ -328,15 +328,15 @@ a.interest-item:focus {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0C0C0C;
-    --interest-item-1: #B7B39A;
-    --interest-item-2: #7F7685;
-    --interest-item-3: #7D8F97;
+    --interest-item-1: #C6C2A9;
+    --interest-item-2: #8B8393;
+    --interest-item-3: #8F9EA6;
     --font-color: #f5f5f5;
     --sec-color: #a9a9a9;
     --border-color: #323232;
     --container-color: #292929;
-    --link-color: #8ba3ae;
-    --visited-link: #8ba3ae;
+    --link-color: #98b7c5;
+    --visited-link: #98b7c5;
   }
 }
 
