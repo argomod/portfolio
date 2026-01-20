@@ -23,9 +23,9 @@
     <!-- Title -->
     <h1 class="large-text bold-text spacing-medium-top">Swift Tales 1</h1>
 
-    <p class="sec-text spacing-medium-top">July 2024 — This is the first installment in how my team and I built the iOS version of Times Product Language (TPL), the New York Times' design system. </p>
+    <p class="sec-text spacing-medium-top">July 2024 — This is the first installment of how my team and I built the iOS version of Times Product Language (TPL), the New York Times' design system. </p>
       
-    <p class="sec-text">Starting with zero iOS experience, in 2 months we all learned SwiftUI and transformed our color, typography, and spacing for NYT's iOS apps.</p>
+    <p class="sec-text">Starting with zero iOS experience, in 2 months we all learned SwiftUI and shipped color, typography, and spacing for NYT's iOS apps.</p>
 
     <p class="sec-text">The TPL team was me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes, <a href="https://jacsaik.com/"
         target="_blank">Jaclyn Saik</a>, Mallaigh Ashton, Norel Hassan, and Dan Mall.</p>
@@ -38,14 +38,16 @@
 
     <p>"Yeah, if you want to." is my usual answer.</p>
 
-    <p>At the start of 2024, we were stunned when we were asked to build iOS components. This was a huge break for the scrappy TPL team. The only problem was we were all starting from Rectangle() one. None of us had ever built anything in iOS.</p>
+    <p>At the start of 2024, we were stunned when leadership asked us to build iOS components. This was a huge break for our scrappy team. But inconveniently, we were all starting from Rectangle() one. None of us had ever built anything in iOS.</p>
 
-    <p>But yeah, I wanted to. And Norel and Dan let me take a shot (for while I'll be forevr grateful). So I learned the same way our engineers Joe and Sergio did: we spent many hours Googling, practicing, and
+    <p>But yeah, I wanted to.</p>
+
+    <p>Norel and Dan let me take a shot (for which I'll be forever grateful). I learned the same way our engineers Joe and Sergio did: we spent many hours Googling, practicing, and
       rigorously iterating our work. I studied at nights and had fun making sample projects with <a
-        href="https://www.hackingwithswift.com/100/swiftui" target="_blank">Hacking With Swift</a>. And <a
+        href="https://www.hackingwithswift.com/100/swiftui" target="_blank">Hacking With Swift</a>. <a
         href="https://developer.apple.com/swift-playgrounds/" target="_blank">Swift Playgrounds</a> also hooked me.</p>
 
-    <p>Despite the same effort, I developed strengths different from Joe and Sergio. As deeply
+    <p>I naturally developed strengths different from Joe and Sergio. As deeply
       experienced engineers, they excel at making iOS source code efficient for production by applying their wisdom
       from other languages.</p>
 
@@ -64,9 +66,9 @@
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-1.png"
       alt="Prototyping — A prototype that demos a technique for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order for VoiceOver and keyboard users." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Prototyping — A prototype demoing a technique
+    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Prototyping — A prototype that demos a technique
       for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order for
-      VoiceOver and keyboard users.</p>
+      VoiceOver users.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-2.png"
       alt="Polish — A step-by-step tutorial explaining how to implement a component along with code samples and a preview." />
@@ -89,7 +91,7 @@
 
     <p>Our design system uses JSON to store a single source of truth for basic design decisions. Ideally, one value can
       be directly injected into our code or conveniently translated to work with a platform’s preferred convention. My
-      responsibility was to decide what integer makes the most sense to represent line height in TPL’s JSON repository.
+      responsibilities were to decide what integer makes the most sense to represent line height in TPL’s JSON repository, and figure out how to make it work in SwiftUI.
     </p>
 
     <p>On web, line height can be expressed in any unit accepted in CSS; <a
@@ -132,7 +134,7 @@
 
     <p>But how fortunate I felt. My journey led me to find a problem that annoyed engineers for years,
       and one I uniquely had the skill and patience to fix. Over 2 days I used FontForge to adjust the metrics manually,
-      tested it in Xcode, and together we shipped the fixed font file to production. You can see find it in the Games app.</p>
+      tested it in Xcode, and together we shipped the fixed font file to production. You can find it in the Games app.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-6.png"
       alt="A diagram breaking down font metrics by using screenshots from Xcode and Font Forge." />
