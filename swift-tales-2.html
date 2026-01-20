@@ -22,8 +22,11 @@
 
     <!-- Swift Tales 2 -->
     <h1 class="large-text bold-text spacing-medium-top">Swift Tales 2</h1>
-    <p class="sec-text spacing-medium-top">July 2024 — In the next installments, I’ll chronologically talk about the two
-      new iOS components we shipped in TPL. This first was a popover menu we called “context menu”. <em>(Don't fret, SwiftUI-heads.)</em></p>
+    <p class="sec-text spacing-medium-top">July 2024 — Next I’ll talk about the two
+      new iOS components we shipped in TPL. This first was a popover menu we called “context menu”. (I know what you're thinking, Swifties. Read to the end.)</p>
+
+       <p class="sec-text">The TPL team was me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes, <a href="https://jacsaik.com/"
+        target="_blank">Jaclyn Saik</a>, Mallaigh Ashton, Norel Hassan, and Dan Mall.</p>
 
     <!-- Team and timeline -->
     <h2 class="bold-text spacing-medium-top">Team and timeline</h2>
@@ -33,14 +36,14 @@
 
     <!-- Punk -->
     <h2 class="bold-text spacing-medium-top">Punk</h2>
-    <p>When Dan Mall started working with the team, he encouraged us designers to find ways to work as close to
+    <p>When Dan Mall started working with the team, he encouraged the designers to find ways to work as close to
       engineering as possible.</p>
 
-    <p>Until then my style of engineering collaboration was punk—sneaking around expectations to use my coding knowledge
+    <p>Until then my style of engineering collaboration was punk—sneaking around job titles to use my coding knowledge
       to form cross-discipline friendships and make cool stuff happen.</p>
 
     <p>But without the expectation of staying in my lane, in what new ways could I be punk? I thought: If I wanted to
-      get close to code, what if I set aside Figma, the defacto tool for designers, altogether?</p>
+      get close to code, what if I set aside Figma altogether?</p>
 
 
     <!-- Collaboration -->
@@ -56,7 +59,7 @@
         might come together one day</li>
     </ul>
 
-    <p>But once I could get stuff done on my own, I still wanted to work with Joe and Sergio. Dan calls this way of
+    <p>I still wanted to work with Joe and Sergio. Dan calls this way of
       collaborating “hot potato”, where 2-3 independent contributors pass the work between each other synchronously.
       This was a speedy way to vet ideas and observe engineering life. Engineers are TPL customers at the end of the
       day.</p>
@@ -68,12 +71,12 @@
     <p>The way I see it, my role as a design/eng hybrid is to convince Brand and Engineering that they want the same
       things. And my role as an accessibility subject matter expert is to build something that works for everyone.</p>
 
-    <p>In the case of context menu, however, little compromise could be had.</p>
+    <p>In the case of Context Menu, however, little compromise could be had.</p>
 
 
     <!-- Prototypes -->
     <h2 class="bold-text spacing-medium-top">Prototypes</h2>
-    <p>Okay, maybe I’m a tad clairvoyant. I knew Brand would prefer a fully custom popover menu. (I did too.)</p>
+    <p>Maybe I’m a tad clairvoyant. I knew Brand would prefer a fully custom popover menu. (I did too.)</p>
 
     <p>But through prototyping in Xcode, I learned that anything that requires dynamic positioning based on screen
       bounds is troublesome in SwiftUI. Unlike web, SwiftUI has stricter parent/child relationship rules that make it
@@ -93,15 +96,15 @@
     <p>Through this experience, I helped develop a philosophy the TPL team now tries to stick to:</p>
 
     <ol class="spacing-small-bottom">
-      <li>Dig into the SwiftUI docs for solutions (and create a prototype)</li>
+      <li>Dig into the SwiftUI docs for a native solution (and create a prototype)</li>
       <li>Test how much can be customized and review with the Brand team (and create a prototype)</li>
-      <li>If that fails, quickly gauge how difficult it is to go full custom and review it with Brand and iOS engineers
+      <li>If that fails, quickly gauge how difficult it is to go fully custom and review it with Brand and iOS engineers
         (and create a prototype)</li>
       <li>Either agree on visual design compromises and lean toward SwiftUI conventions or communicate the time and cost
         of going fully custom (and create many more prototypes)</li>
     </ol>
 
-    <p>As you can tell, I love prototypes.</p>
+    <p>I love prototypes.</p>
 
     <p>I created an example of a SwiftUI Menu and discovered that the only detail we could adjust were optional icons
       next to the text (which, after reviewing with Brand, we hoped to avoid using anyway).</p>
@@ -136,7 +139,7 @@
       tools for future components.
     </p>
 
-    <p>Yes. I did use Figma to sketch some ideas. I’m a punk, not a masochist! Plus I needed to offer a nice component
+    <p>Yes. I did use Figma to sketch some ideas. I’m a punk, not a masochist. Plus I needed to offer a nice component
       for designers.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-4.png"
@@ -144,7 +147,7 @@
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">An Apple Menu component in Figma with a
       variant for more list items and a hidden list item subcomponent with a destructive red variant.</p>
 
-    <p class="spacing-small-top">In the <a href="./swift-tales-3.html">next installment</a>, we’ll dive into another iOS component!</p>
+    <p class="spacing-small-top">In the <a href="./swift-tales-3.html">next installment</a>, we’ll dive into another iOS component.</p>
 
   </main>
 
