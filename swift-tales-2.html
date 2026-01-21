@@ -22,8 +22,7 @@
 
     <!-- Swift Tales 2 -->
     <h1 class="large-text bold-text spacing-medium-top">Swift Tales 2</h1>
-    <p class="sec-text spacing-medium-top">July 2024 — Next I’ll talk about the two
-      new iOS components we shipped in TPL. This first was a popover menu we called “context menu”. (I know what you're thinking, Swifties. Read to the end.)</p>
+    <p class="sec-text spacing-medium-top">July 2024 — I’ll talk about the first iOS component we kinda shipped in TPL: a popover menu we called “context menu”. (I know what you're thinking, Swifties. Read to the end.)</p>
 
        <p class="sec-text">The TPL team was me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes, <a href="https://jacsaik.com/"
         target="_blank">Jaclyn Saik</a>, Mallaigh Ashton, Norel Hassan, and Dan Mall.</p>
@@ -39,16 +38,16 @@
     <p>When Dan Mall started working with the team, he encouraged the designers to find ways to work as close to
       engineering as possible.</p>
 
-    <p>Until then my style of engineering collaboration was punk—sneaking around job titles to use my coding knowledge
+    <p>My style of eng collaboration had been punk—sneaking around job titles to use my coding knowledge
       to form cross-discipline friendships and make cool stuff happen.</p>
 
-    <p>But without the expectation of staying in my lane, in what new ways could I be punk? I thought: If I wanted to
-      get close to code, what if I set aside Figma altogether?</p>
+    <p>But now, without the expectation of staying in my lane, in what new ways could I be punk? Maybe if I wanted to
+      get close to code, could I set aside Figma altogether?</p>
 
 
     <!-- Collaboration -->
     <h2 class="bold-text spacing-medium-top">Collaboration</h2>
-    <p>I needed help from Joe and Sergio from the get-go. This is the main stuff they helped me learn:</p>
+    <p>I needed Joe and Sergio's help from the get-go. This is the main stuff they helped me learn:</p>
 
     <ul class="spacing-small-bottom">
       <li>Xcode: Set up a simple preview environment, connect to the iOS-TPL repository, get rid of errors</li>
@@ -59,12 +58,12 @@
         might come together one day</li>
     </ul>
 
-    <p>I still wanted to work with Joe and Sergio. Dan calls this way of
+    <p>Dan calls this way of
       collaborating “hot potato”, where 2-3 independent contributors pass the work between each other synchronously.
-      This was a speedy way to vet ideas and observe engineering life. Engineers are TPL customers at the end of the
+      This was a great way to vet ideas and observe engineering life. Engineers are TPL customers at the end of the
       day.</p>
 
-    <p>But they’re not my only customers. I also serve the Brand team. Brand must sign off on all of my work, which I
+    <p>But not my only customers. I also serve the Brand team. Brand must sign off on all of my work, which I
       honestly love. Not just because they’re awesome people, but also because designers and engineers alike want our
       stuff to look and feel excellent across the Times.</p>
 
@@ -78,17 +77,16 @@
     <h2 class="bold-text spacing-medium-top">Prototypes</h2>
     <p>Maybe I’m a tad clairvoyant. I knew Brand would prefer a fully custom popover menu. (I did too.)</p>
 
-    <p>But through prototyping in Xcode, I learned that anything that requires dynamic positioning based on screen
-      bounds is troublesome in SwiftUI. Unlike web, SwiftUI has stricter parent/child relationship rules that make it
-      challenging to program context menu to act as expected. I was in a bind.</p>
+    <p>But through prototyping in Xcode, I learned that anything that requires constantly updated positioning based is troublesome in SwiftUI. Unlike web, SwiftUI has stricter parent/child relationship rules that make it
+      messy to program Context Menu to act as expected. I was in a bind.</p>
 
     <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-2-1.png"
       alt="An example of z index on the web (left) and in SwiftUI (right) with the same parent child relationships. SwiftUI does not override the parent." />
     <p class="sec-text small-text spacing-small-bottom">An example of z index on the web (left) and in SwiftUI (right)
       with the same parent/child relationships. SwiftUI does not override the parent.</p>
 
-    <p class="spacing-small-top">Joe felt strongly that within our timeline building something custom wasn’t feasible.
-      He also pointed out the future cost of maintaining something potentially fragile and complicated especially when
+    <p class="spacing-small-top">Joe felt strongly that building something custom wasn’t feasible within the known future.
+      He also pointed out the future cost of maintaining something fragile and complicated especially when
       SwiftUI already provides a very similar component, <a
         href="https://developer.apple.com/documentation/swiftui/menu/" target="_blank">Menu</a>. (And it’s so easy to
       use).</p>
@@ -124,7 +122,7 @@
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A custom context menu that uses
       GeometryReader and .fullScreenCover to automatically avoid positioning context menu off the screen.</p>
 
-    <p class="spacing-small-top">Reviewing our decision with iOS engineers was very reassuring. I think they were
+    <p class="spacing-small-top">Opting to use SwiftUI's Menu component was now an easy choice. Reviewing our decision with iOS engineers was very reassuring. I think they were
       relieved by how creatively and harmoniously we all agreed that sticking to Apple convention was the right choice.
     </p>
 
