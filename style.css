@@ -38,7 +38,7 @@ h3,
 p:not(:last-child),
 h2,
 h1,
-li:not(:last-child) {
+li {
   margin-bottom: var(--spacing-small) !important
 }
 

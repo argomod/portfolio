@@ -32,7 +32,7 @@
 
 
     <!-- Humble beginnings -->
-    <h2 class="bold-text spacing-medium-top">Humble beginnings</h2>
+    <h2 class="bold-text spacing-large-top">Humble beginnings</h2>
 
     <p>"Should designers code?”</p>
 
@@ -64,25 +64,25 @@
       </li>
     </ol>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-1.png"
+    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-1-1.png"
       alt="Prototyping — A prototype that demos a technique for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order for VoiceOver and keyboard users." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Prototyping — A prototype that demos a technique
       for presenting a tooltip in SwiftUI via an overlay and making it appear logically in the reading order for
       VoiceOver users.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-2.png"
+    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-1-2.png"
       alt="Polish — A step-by-step tutorial explaining how to implement a component along with code samples and a preview." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Polish — A step-by-step tutorial explaining
       how to implement a component along with code samples and a preview.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-3.png"
+    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-1-3.png"
       alt="Accessibility — A screen recording of a prototype with VoiceOver that I sent to Joe and Sergio to demo an accessibility technique" />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">Accessibility — A screen recording of a
       prototype read with VoiceOver that I sent to Joe and Sergio to demo an accessibility technique.</p>
 
 
     <!-- Line height -->
-    <h2 class="bold-text spacing-medium-top">Line height</h2>
+    <h2 class="bold-text spacing-large-top">Line height</h2>
 
     <p>The journey to translate good, accessible line height to iOS I think shows the lens (and obsession) designers can bring to a typical engineering problem.</p>
 
@@ -98,23 +98,23 @@
         numbers are most
         accessible</a>. In Figma, line height is expressed either in pixels or as a percentage.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-4.png" alt="A few examples of how to set line height in Figma
+    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-1-4.png" alt="A few examples of how to set line height in Figma
     and web." />
     <p aria-hidden="true" class="sec-text small-text">A few examples of how to set line height in Figma
       and web.</p>
 
-    <p class="spacing-small-top">I used Xcode to study how line height is set in <a
+    <p class="spacing-medium-top">I used Xcode to study how line height is set in <a
         href="https://developer.apple.com/documentation/swiftui/view/linespacing(_:)">SwiftUI</a> and <a
         href="https://developer.apple.com/documentation/uikit/nsmutableparagraphstyle/1528742-linespacing">UIKit</a>,
       called lineSpacing. I learned lineSpacing also takes an integer… but using the number that Figma produced was way
       off. What’s happening here?</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-5.png"
+    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-1-5.png"
       alt="A line height prototype with Figma depicted on the left and Xcode on the right. lineSpacing in SwiftUI is much taller." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A line height prototype with Figma depicted
       on the left and Xcode on the right. lineSpacing in SwiftUI is much taller.</p>
 
-    <p class="spacing-small-top">iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts
+    <p class="spacing-medium-top">iOS’s lineSpacing works similarly to pixels in Figma and web, but the integer starts
       with the font size. For example, a lineSpacing value of 0 applied to a font size of 16pt yields a 16pt line
       height, and a lineSpacing
       value of 2 applied to a font size of 18pt yields a 20pt line height.</p>
@@ -135,29 +135,29 @@
       and one I uniquely had the skill and patience to fix. Over 2 days I used FontForge to adjust the metrics manually,
       tested it in Xcode, and together we shipped the fixed font file to production. You can find it in the Games app.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-6.png"
+    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-1-6.png"
       alt="A diagram breaking down font metrics by using screenshots from Xcode and Font Forge." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A diagram breaking down font metrics by using
       screenshots from Xcode and Font Forge.</p>
 
-    <p class="spacing-small-top">I found another strange truth in how iOS distributes line height around text.</p>
+    <p class="spacing-medium-top">I found another strange truth in how iOS distributes line height around text.</p>
 
     <p>While web and Figma equally split line height above and below a line of text, Apple places space only in-between
       lines of text. Yes, this is why our designs have spacing issues around text after handoff! Joe and I call this
       the “half-leading problem”.</p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-small-top" src="./assets/swift-tales-1-7.png"
+    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-1-7.png"
       alt="A prototype shwoing Figma overlaid on Xcode. The green line is the difference between the two, which equals half of lineSpacing in SwiftUI." />
     <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A prototype showing Figma overlaid on Xcode.
       The green line is the difference between the two, which equals half of lineSpacing in SwiftUI.</p>
 
-    <p class="spacing-small-top">By now you know how much I care about line height. But I also have some new hard-earned
+    <p class="spacing-medium-top">By now you know how much I care about line height. But I also have some new hard-earned
       wisdom. While in the past I may have insisted my engineers “fix this”, I now know the half-leading problem has no simple
       solution. We decided not to attempt a programmatic fix to stay within scope and meet our deadline.</p>
 
 
     <!-- Summary -->
-    <h2 class="bold-text spacing-medium-top">Summary</h2>
+    <h2 class="bold-text spacing-large-top">Summary</h2>
     <p>In 2 months, I, Joe, and Sergio learned the basics of coding in iOS and distributed color, typography, and spacing tokens for use in SwiftUI, all meeting the rigorous accessibility and visual quality of standards of the Times. I used my new Xcode prototyping skills to solve problems
       quickly and to balance design requirements with engineering feasibility.</p>
     <p>In the <a href="./swift-tales-2.html">next installment</a>, we’ll dive into our first iOS component.</p>
