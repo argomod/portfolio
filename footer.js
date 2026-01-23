@@ -1,7 +1,7 @@
 class footer extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = `
+  constructor() {
+    super();
+    this.innerHTML = `
         <footer>
             <div class="interest-container spacing-large-bottom">
                 <a class="interest-item interest-item-1" href="https://www.ikea.com/us/en/p/gulliver-crib-green-70589505/?gad_source=1&gad_campaignid=22399713111&gbraid=0AAAAAD27g7wzDtrmdIqdqxcpS6LpnGPsk&gclid=CjwKCAiAj8LLBhAkEiwAJjbY75esh6x-XrbTZexUqpaabN9MwAqAhCDjHK_BD1oOytkj7zO_C8P23hoC2zwQAvD_BwE" target="_blank">
@@ -25,8 +25,8 @@ class footer extends HTMLElement {
 
             </div>
         </footer>
-        `
-    }
+        `;
+  }
 }
 
-customElements.define('mo-footer', footer)
+customElements.define("mo-footer", footer);

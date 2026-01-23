@@ -1,147 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Swift Tales 3 - MattArgo.com</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script defer src="closeButton.js"></script>
+    <script defer src="footer.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Swift Tales 3 - MattArgo.com</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <script defer src="closeButton.js"></script>
-  <script defer src="footer.js"></script>
-</head>
+  <body>
+    <main>
+      <!-- Close button -->
+      <mo-close></mo-close>
 
-<body>
+      <!-- Swift Tales 3 -->
+      <h1 class="large-text bold-text spacing-medium-top">Swift Tales 3</h1>
+      <p class="sec-text spacing-medium-top">
+        July 2024 — After finishing Menu, the TPL team built a full-screen modal
+        with a scrim and animation used to announce new products or features,
+        called Dialog.
+      </p>
 
-  <main>
+      <p class="sec-text">
+        The TPL team was me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes,
+        <a href="https://jacsaik.com/" target="_blank">Jaclyn Saik</a>, Mallaigh
+        Ashton, Norel Hassan, and Dan Mall.
+      </p>
 
-    <!-- Close button -->
-    <mo-close></mo-close>
+      <!-- Team and timeline -->
+      <h2 class="bold-text spacing-large-top">Team and timeline</h2>
+      <p>
+        <a href="https://jacsaik.com/" target="_blank">Jaclyn Saik</a> led
+        design. Joseph Kohlmann led engineering. I led a mix of design and
+        engineering. Sergio Cuevas contributed engineering. We completed this
+        work in 3 months.
+      </p>
 
+      <h2 class="bold-text spacing-large-top">Called in</h2>
 
-    <!-- Swift Tales 3 -->
-    <h1 class="large-text bold-text spacing-medium-top">Swift Tales 3</h1>
-    <p class="sec-text spacing-medium-top">July 2024 — After finishing Menu, the TPL team built a full-screen modal with
-      a scrim and animation used to announce new products or features, called Dialog.</p>
+      <p>
+        At the Times, I’ve learned that designers appreciate independence. We
+        even have an internal motto, “Strong opinions held loosely”. So when we
+        split design work on the team, I make it clear that I’ll jump in only
+        when called in.
+      </p>
 
-<p class="sec-text">The TPL team was me, Joseph Kohlmann, Sergio Cuevas, Riley Sykes, <a href="https://jacsaik.com/"
-        target="_blank">Jaclyn Saik</a>, Mallaigh Ashton, Norel Hassan, and Dan Mall.</p>
+      <p>
+        Jac called me in mid-way through the project to help translate her
+        design vision for Dialog into iOS code. The visuals were mostly done in
+        Figma, Brand was happy with them, and so were the teams who’d likely use
+        Dialog in their work.
+      </p>
 
-    <!-- Team and timeline -->
-    <h2 class="bold-text spacing-large-top">Team and timeline</h2>
-    <p><a href="https://jacsaik.com/" target="_blank">Jaclyn Saik</a> led design. Joseph Kohlmann led engineering. I led a mix of design and engineering. Sergio Cuevas contributed engineering. We completed this work in 3 months.</p>
+      <p>
+        My responsibility was to be as helpful as possible to Joe and Sergio in
+        building the design. I was able to code typography, color, and spacing
+        independently, polishing Jac's design work. But additionally, I found I
+        was able to contribute in new ways to the coding experience itself.
+      </p>
 
-    <h2 class="bold-text spacing-large-top">Called in</h2>
+      <!-- Hello, UIKit -->
+      <h2 class="bold-text spacing-large-top">Hello, UIKit</h2>
+      <p>
+        We found a nice fit with .fullScreenCover, but unfortunately, we
+        couldn’t replace the slide-up animation with a fade-in. Cam Pulsford,
+        principal iOS engineer and guardian angel, recommended we dabble in
+        UIKit.
+      </p>
 
-    <p>At the Times, I’ve learned that designers appreciate independence. We even have an internal motto, “Strong
-      opinions held loosely”. So when we split design work on the team, I make it clear that I’ll jump in only when
-      called in.</p>
+      <p>
+        When Joe would commit a UIKit experiment in GitHub, I’d pull it and see
+        if I could understand it enough to implement it by myself. If I, a
+        junior Swiftie, could figure it out, we’d be in a safe zone for the rest
+        of our engineering customers.
+      </p>
 
-    <p>Jac called me in mid-way through the project to help translate her design vision for Dialog into iOS code. The visuals were
-      mostly done in Figma, Brand was happy with them, and so were the teams who’d likely use Dialog in their work.</p>
+      <img
+        class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+        src="./assets/swift-tales-3-1.png"
+        alt="A failed attempt at using UIKit in a SwiftUI context in Xcode. This is a moderately difficult technique that we eventually simplified and I documented for iOS engineers"
+      />
+      <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+        A failed attempt at using UIKit in a SwiftUI context. This is a
+        moderately difficult technique that we eventually simplified and I
+        documented for iOS engineers.
+      </p>
 
-    <p>My responsibility was to be as helpful as possible to Joe and Sergio in building the design. I
-      was able to code typography, color, and spacing independently, polishing Jac's design work. But additionally, I
-      found I was able to contribute in new ways to the coding experience itself.</p>
+      <!-- Hello, DocC -->
+      <h2 class="bold-text spacing-large-top">Hello, DocC</h2>
 
+      <p>
+        By this point in my coding journey, I felt Apple’s own SwiftUI and UIKit
+        docs were sometimes… lacking. Now I had my chance to step to the plate
+        because Dialog’s SwiftUI and UIKit mixture needed thorough explanation.
+        As I mentioned in <a href="./swift-tales-1.html">Swift Tales 1</a>, this
+        was an awesome opportunity to contribute to the
+        <span class="bold-text">polish</span> phase.
+      </p>
 
-    <!-- Hello, UIKit -->
-    <h2 class="bold-text spacing-large-top">Hello, UIKit</h2>
-    <p>We found a nice fit with .fullScreenCover, but unfortunately, we couldn’t replace the slide-up animation with a
-      fade-in. Cam Pulsford, principal iOS engineer and guardian angel, recommended we dabble in UIKit.</p>
+      <p>
+        Joe trusted me to figure out Apple’s documentation language,
+        <a href="https://www.swift.org/documentation/docc/" target="_blank"
+          >DocC</a
+        >. There are four types of DocC documentation I used:
+      </p>
 
-    <p>When Joe would commit a UIKit experiment in GitHub, I’d pull it and see if I could understand it enough to
-      implement it by myself. If I, a junior Swiftie, could figure it out, we’d be in a safe zone for the rest of our
-      engineering customers.</p>
+      <ul class="spacing-small-bottom">
+        <li>
+          Source code: In-line code comments marked with three forward slashes
+          (///)
+        </li>
+        <li>
+          Tutorials: Step-by-step text and code samples to walk through how to
+          make a Dialog
+        </li>
+        <li>
+          Sample code article: A freeform page of text that hosts small bits of
+          code
+        </li>
+      </ul>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-3-1.png"
-      alt="A failed attempt at using UIKit in a SwiftUI context in Xcode. This is a moderately difficult technique that we eventually simplified and I documented for iOS engineers" />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A failed attempt at using UIKit in a SwiftUI
-      context. This is a moderately difficult technique that we eventually simplified and I documented for iOS
-      engineers.</p>
+      <p>
+        Through trial and error, I learned that setting up a Dialog was best
+        explained in a tutorial and styling was best explained in a sample code
+        article. Source code comments are extra-special: they offer help for
+        those who prefer to dive into the source code, and they also appear in
+        Xcode's Quick Help.
+      </p>
 
+      <img
+        class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+        src="./assets/swift-tales-3-2.png"
+        alt="An example of source code comments and how they appear in Quick Help."
+      />
+      <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+        An example of source code comments and how they appear in Quick Help.
+      </p>
 
-    <!-- Hello, DocC -->
-    <h2 class="bold-text spacing-large-top">Hello, DocC</h2>
+      <img
+        class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+        src="./assets/swift-tales-3-3.png"
+        alt="An example of a tutorial that includes code samples and a preview."
+      />
+      <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+        An example of a tutorial that includes code samples and a preview.
+      </p>
 
-    <p>By this point in my coding journey, I felt Apple’s own SwiftUI and UIKit docs were sometimes… lacking. Now I had
-      my chance to step to the plate because Dialog’s SwiftUI and UIKit mixture needed thorough explanation. As I
-      mentioned in <a href="./swift-tales-1.html">Swift Tales 1</a>, this was an awesome opportunity to contribute to
-      the <span class="bold-text">polish</span> phase.</p>
+      <img
+        class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+        src="./assets/swift-tales-3-4.png"
+        alt="A sample code article that explains how to use a snippet of code to style Dialog."
+      />
+      <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+        A sample code article that explains how to use a snippet of code to
+        style Dialog.
+      </p>
 
-    <p>Joe trusted me to figure out Apple’s documentation language, <a href="https://www.swift.org/documentation/docc/"
-        target="_blank">DocC</a>. There are four types of DocC documentation I used:</p>
+      <!-- Patterns -->
+      <h2 class="bold-text spacing-large-top">Patterns</h2>
+      <p>
+        Joe and I bounced around quite a few ideas for the structure of Dialog’s
+        code. At this point, I learned through my own experiences of using TPL
+        that ergonomics can make it especially enjoyable. But what did our
+        customers prefer in <em>their</em> day-to-day?
+      </p>
 
-    <ul class="spacing-small-bottom">
-      <li>Source code: In-line code comments marked with three forward slashes (///)</li>
-      <li>Tutorials: Step-by-step text and code samples to walk through how to make a Dialog</li>
-      <li>Sample code article: A freeform page of text that hosts small bits of code</li>
-    </ul>
+      <p>
+        To answer that question, I led two usability sessions where we asked iOS
+        engineers to import the iOS-TPL library and try using Dialog in their
+        own codebase. We learned a few important things:
+      </p>
 
-    <p>Through trial and error, I learned that setting up a Dialog was best explained in a tutorial and styling was
-      best explained in a sample code article. Source code comments are extra-special: they offer help for those who
-      prefer to dive into the source code, and they also appear in Xcode's Quick Help.</p>
+      <ul>
+        <li>Many Times engineers are new to SwiftUI, just like us.</li>
+        <li>
+          Tutorial documentation was a hit. While great for beginners in
+          SwiftUI, it also worked very well to show how to integrate with UIKit,
+          which is moderately difficult.
+        </li>
+        <li>
+          Visual previews in our source code were also very helpful for those
+          who prefer to jump right in.
+        </li>
+        <li>
+          Less code tends to feel more ergonomic. For example, trailing closure
+          syntax eliminates the need to declare a parameter.
+        </li>
+        <li>
+          Flexibility to pass in views, rather than strings, is expected (this
+          is different from Figma properties, for example).
+        </li>
+      </ul>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-3-2.png"
-      alt="An example of source code comments and how they appear in Quick Help." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">An example of source code comments and how
-      they appear in Quick Help.</p>
+      <img
+        class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+        src="./assets/swift-tales-3-5.png"
+        alt="An piece of code that shows how label, title, and description parameters accept Text views rather than strings."
+      />
+      <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+        A piece of code that shows how "label", "title", and "description"
+        parameters accept Text views rather than strings.
+      </p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-3-3.png"
-      alt="An example of a tutorial that includes code samples and a preview." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">An example of a tutorial that includes code
-      samples and a preview.</p>
+      <!-- Summary -->
+      <h2 class="bold-text spacing-large-top">Summary</h2>
+      <p>
+        We shipped Dialog on time. I led usability testing, and I built the code
+        tutorials and sample code articles. I collaborated with Joe to architect
+        the structure of the component. And I collaborated with Jac to translate
+        design decisions to code.
+      </p>
 
-    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-3-4.png"
-      alt="A sample code article that explains how to use a snippet of code to style Dialog." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A sample code article that explains how to
-      use a snippet of code to style Dialog.</p>
+      <img
+        class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+        src="./assets/swift-tales-3-6.png"
+        alt="A demo of Dialog with and without hero image; these were produced in Xcode."
+      />
+      <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+        A demo of Dialog with and without hero image; these were produced in
+        Xcode.
+      </p>
 
+      <p class="spacing-medium-top">
+        I learned to connect SwiftUI and UIKit which became very important as I
+        studied more about the varied code bases across the NYT apps. But more
+        about that in a future installment.
+      </p>
+    </main>
 
-    <!-- Patterns -->
-    <h2 class="bold-text spacing-large-top">Patterns</h2>
-    <p>Joe and I bounced around quite a few ideas for the structure of Dialog’s code. At this point, I learned through
-      my own experiences of using TPL that ergonomics can make it especially enjoyable. But what did our customers
-      prefer in <em>their</em> day-to-day?</p>
-
-    <p>To answer that question, I led two usability sessions where we asked iOS engineers to import the iOS-TPL library
-      and try using Dialog in their own codebase. We learned a few important things:</p>
-
-    <ul>
-      <li>Many Times engineers are new to SwiftUI, just like us.</li>
-      <li>Tutorial documentation was a hit. While great for beginners in SwiftUI, it also worked very well to show how
-        to integrate with UIKit, which is moderately difficult.</li>
-      <li>Visual previews in our source code were also very helpful for those who prefer to jump right in.</li>
-      <li>Less code tends to feel more ergonomic. For example, trailing closure syntax eliminates the need to declare a
-        parameter.</li>
-      <li>Flexibility to pass in views, rather than strings, is expected (this is different from Figma properties, for
-        example).</li>
-    </ul>
-
-    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-3-5.png"
-      alt="An piece of code that shows how label, title, and description parameters accept Text views rather than strings." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A piece of code that shows how "label",
-      "title", and "description" parameters accept Text views rather than strings.</p>
-
-
-    <!-- Summary -->
-    <h2 class="bold-text spacing-large-top">Summary</h2>
-    <p>We shipped Dialog on time. I led usability testing, and I built the code tutorials and sample code articles. I
-      collaborated with Joe to architect the structure of the component. And I collaborated with Jac to translate design
-      decisions to code.</p>
-
-    <img class="selected-work-image spacing-xsmall-bottom spacing-medium-top" src="./assets/swift-tales-3-6.png"
-      alt="A demo of Dialog with and without hero image; these were produced in Xcode." />
-    <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">A demo of Dialog with and without hero image;
-      these were produced in Xcode.</p>
-
-    <p class="spacing-medium-top">I learned to connect SwiftUI and UIKit which became very important as I studied
-      more about the varied code bases across the NYT apps. But more about that in a future installment.</p>
-  </main>
-
-  <mo-footer></mo-footer>
-
-</body>
-
+    <mo-footer></mo-footer>
+  </body>
 </html>

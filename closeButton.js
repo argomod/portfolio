@@ -1,7 +1,7 @@
 class close extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = `
+  constructor() {
+    super();
+    this.innerHTML = `
         <close class="close-button">
             <a href="/" class="no-underline" aria-label="Back home">
                 <div class="button">
@@ -11,8 +11,8 @@ class close extends HTMLElement {
                 </div>
             </a>
         </close>
-        `
-    }
+        `;
+  }
 }
 
-customElements.define('mo-close', close)
+customElements.define("mo-close", close);

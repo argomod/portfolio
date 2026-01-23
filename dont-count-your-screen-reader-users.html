@@ -1,56 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Don't count your screen reader users. - MattArgo.com</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script defer src="closeButton.js"></script>
+    <script defer src="footer.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Don't count your screen reader users. - MattArgo.com</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <script defer src="closeButton.js"></script>
-  <script defer src="footer.js"></script>
-</head>
+  <body>
+    <main>
+      <!-- Close button -->
+      <mo-close></mo-close>
 
-<body>
+      <!-- Don't count your screen reader users. -->
+      <h1 class="large-text bold-text spacing-medium-top">
+        Don't count your screen reader users.
+      </h1>
 
-  <main>
+      <p class="sec-text spacing-medium-top">
+        August 2022 — The gist: If your app isn't enjoyable for screen reader
+        users, they are probably not using it and can't be counted anyway. The
+        number of screen reader users who use your app shouldn’t determine
+        whether you design for them.
+      </p>
 
-    <!-- Close button -->
-    <mo-close></mo-close>
+      <div class="spacing-medium-top">
+        <p>
+          The other day I was chatting with a colleague about some of the
+          intricacies of designing good screen reader experiences. They
+          suggested, "Shouldn't we measure how many of our customers actually
+          use screen readers before we start dedicating resources toward this?"
+        </p>
+        <p>
+          I get how this can make sense at first—why go through the extra effort
+          of designing for a set of users if they'll only account for a tiny
+          amount of total users? Couldn't we do something more important with
+          our resources?
+        </p>
+        <p>
+          My first thought to this type of inquiry is if just
+          <em>one</em> person—our CEO—used a screen reader, designing for screen
+          reader users wouldn't even be a question.
+        </p>
+        <p>
+          Not designing with screen reader users in mind is obviously
+          frustrating your current users who use screen readers. But remember:
+          If your app isn't accessible, folks who use assistive technologies
+          have probably moved on. If so... who's left to count?
+        </p>
+        <p>
+          When we count how many current users rely on screen readers, or any
+          other assistive technologies, we aren't actually measuring all of the
+          people who would benefit from inclusive design. Counting screen reader
+          users hardly makes sense in any discussion about the importance of
+          accessibility.
+        </p>
+        <p>
+          Furthermore, should any person ever be treated merely as an edge case?
+        </p>
+      </div>
+    </main>
 
-
-    <!-- Don't count your screen reader users. -->
-    <h1 class="large-text bold-text spacing-medium-top">Don't count your screen reader users.</h1>
-
-    <p class="sec-text spacing-medium-top">August 2022 — The gist: If your app isn't enjoyable for screen reader users,
-      they are
-      probably not using it and can't be counted anyway. The number of screen reader users who use your app
-      shouldn’t determine whether you design for them.</p>
-
-    <div class="spacing-medium-top">
-      <p>The other day I was chatting with a colleague about some of the intricacies of designing good screen reader
-        experiences. They suggested, "Shouldn't we measure how many of our customers actually use screen readers before
-        we start dedicating resources toward this?"</p>
-      <p>I get how this can make sense at first—why go through the extra effort of designing for a set of users if
-        they'll only account for a tiny amount of total users? Couldn't we do something more important with our
-        resources?</p>
-      <p>My first thought to this type of inquiry is if just <em>one</em> person—our CEO—used a screen reader, designing
-        for screen reader users wouldn't even be a question.</p>
-      <p>Not designing with screen reader users in mind is obviously frustrating your current users who use screen
-        readers. But remember: If your app isn't accessible, folks who use assistive technologies have probably moved
-        on.
-        If so... who's left to count?</p>
-      <p>When we count how many current users rely on screen readers, or any other assistive technologies, we
-        aren't actually measuring all of the people who would benefit from inclusive design. Counting screen reader
-        users hardly makes sense in any discussion about the importance of accessibility.</p>
-      <p>Furthermore, should any person ever be treated merely as an edge case?</p>
-    </div>
-
-  </main>
-
-  <mo-footer></mo-footer>
-
-</body>
-
+    <mo-footer></mo-footer>
+  </body>
 </html>
