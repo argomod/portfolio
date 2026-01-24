@@ -13,7 +13,7 @@ body {
   line-height: var(--line-height);
   margin: auto;
   min-height: 100vh;
-  padding: var(--spacing-large) 24px 40px 24px;
+  padding: 0px 24px 40px 24px;
   padding-bottom: env(safe-area-inset-bottom);
   -webkit-font-smoothing: antialiased;
 }
@@ -79,6 +79,14 @@ ul {
 }
 
 /* ELEMENTS */
+
+.home-top {
+  padding-top: var(--spacing-large)
+}
+.page-top {
+  padding-top: var(--spacing-small)
+}
+
 main {
   grid-area: content;
   max-width: 37.5rem;
@@ -86,6 +94,12 @@ main {
 }
 
 @media screen and (min-width: 769px) {
+  .home-top {
+  padding-top: 0
+}
+.page-top {
+  padding-top: 0
+}
   main {
     padding-bottom: 120px;
   }
