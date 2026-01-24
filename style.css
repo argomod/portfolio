@@ -300,7 +300,7 @@ a.interest-item:focus {
 
 /* Font sizes */
 :root {
-  --large-font-size: 1.5rem;
+  --large-font-size: 1.5625rem;
   --body-font-size: 1.125rem;
   --small-font-size: 0.875rem;
 }
