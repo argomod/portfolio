@@ -1,84 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Design for your ears - MattArgo.com</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script defer src="closeButton.js"></script>
+    <script defer src="footer.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Design for your ears - MattArgo.com</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <script defer src="closeButton.js"></script>
-  <script defer src="footer.js"></script>
-</head>
+  <body>
+    <main class="page-top">
+      <!-- Close button -->
+      <mo-close></mo-close>
 
-<body>
+      <!-- Title -->
+      <h1 class="large-text bold-text spacing-medium-top">
+        Design for your ears
+      </h1>
 
-  <main class="page-top">
-
-    <!-- Close button -->
-    <mo-close></mo-close>
-
-    <!-- Title -->
-    <h1 class="large-text bold-text spacing-medium-top">Design for your ears</h1>
-
-    <p class="sec-text">January 2026 — Try closing your eyes to make a better, accessible design. Write your design as a script from left to right, top to bottom.</p>
-    
-
-    <div class="spacing-medium-top">
-    <p>Every time I design a user interface, I get a piece of paper and write it out sequentially like a tv script.</p>
-    <p>When I read my design aloud from left to right, top to bottom, how should it sound? How long should it take to get to the good stuff? What should be read first, and what can wait?
-</p>
-<p>I call it “designing for my ears”. I originally started doing this to make sure whatever I designed made sense for a screen reader user (more on that in a second).</p>
-
-<p>I also realized, as a sighted person, I typically scan in a <a class="underline-link" href="https://www.nngroup.com/articles/layer-cake-pattern-scanning/" target="_blank">layer cake</a> method from left to right, top to bottom. I feel like I even speak in my head sometimes.</p>
-<p>Designing for your ears pushes you to get clear about what your screen should prioritize. And I think this is key to aesthetic, understandable, honest design.</p>
-<p>By writing out your design, you’re also defining reading order, which is essentially the screen reader and keyboard navigation experience. You may also improve cognitive accessibility by eliminating distractions that are oh so tempting to drop into a visual design for needless extra “pop”.</p>
-
-<img
-        class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
-        src="./assets/design-with-your-ears-2.png"
-        alt="Two designs that started as scripts. They can be read from left to right, top to bottom."
-      />
-      <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
-        Two designs that started as scripts. They can be read from left to right, top to bottom.
+      <p class="sec-text">
+        January 2026 — Try closing your eyes to make a better, accessible
+        design. Write your design as a script from left to right, top to bottom.
       </p>
 
+      <div class="spacing-medium-top">
+        <p>
+          Every time I design a user interface, I get a piece of paper and write
+          it out sequentially like a tv script.
+        </p>
+        <p>
+          When I read my design aloud from left to right, top to bottom, how
+          should it sound? How long should it take to get to the good stuff?
+          What should be read first, and what can wait?
+        </p>
+        <p>
+          I call it “designing for my ears”. I originally started doing this to
+          make sure whatever I designed made sense for a screen reader user
+          (more on that in a second).
+        </p>
 
-<p class="spacing-medium-top">After you’ve done this a few times, you’ll run into the meanest accessibility problems that absolutely need your discernment as a designer to solve. You’re at Accessibility 301. Here are my best tips:</p>
+        <p>
+          I also realized, as a sighted person, I typically scan in a
+          <a
+            class="underline-link"
+            href="https://www.nngroup.com/articles/layer-cake-pattern-scanning/"
+            target="_blank"
+            >layer cake</a
+          >
+          method from left to right, top to bottom. I feel like I even speak in
+          my head sometimes.
+        </p>
+        <img
+          class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+          src="./assets/design-for-your-ears-1.png"
+          alt="A small script numbered from one to six, which I then turned into UI sketches."
+        />
+        <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+          A small script numbered from one to six, which I then turned into UI sketches.
+        </p>
 
-    <ul class="spacing-small-top">
-      <li class="disc">
-        <span class="bold-text">Navigation is most important.</span> Your user needs to know where they are before they can comfortably engage. A back button, for example, should be read aloud first on a screen.
-      </li>
-       <li class="disc">
-        <span class="bold-text">You can specify an element to be visually out of order</span>; for example, a back button at the bottom of a screen. Just flag it for your engineer.
-      </li>
-       <li class="disc">
-        <span class="bold-text">Draw arrows on your design if your reading order isn’t obvious.</span> It’s quick and very easy for an engineer to understand.
-      </li>
-      </li>
-       <li class="disc">
-        <span class="bold-text">Label your icon buttons.</span> Always.
-      </li>
-      <li class="disc">
-        <span class="bold-text">Point out your problems.</span> If your script is getting weird but you can’t solve it for one reason or another, at the very least, point it out to your engineer. They may know something to unblock you. Accessibility is sometimes very challenging, but it’s better not to sweep a problem under the rug.
-      </li>
-      <li class="disc">
-        <span class="bold-text">Turn on VoiceOver and test other apps for script inspiration.</span> (But don’t trust they have it figured out better than you!). You can even screen record things you like and add them to your engineering handoff. It may give your engineer the hint they need to code something better.
-      </li>
-    </ul>
+        <p class="spacing-medium-top">
+          Designing for your ears pushes you to get clear about what your screen
+          should prioritize. And I think this is key to aesthetic,
+          understandable, honest design.
+        </p>
+        <p>
+          By writing out your design, you’re also defining reading order, which
+          is essentially the screen reader and keyboard navigation experience.
+          You may also improve cognitive accessibility by eliminating
+          distractions that are oh so tempting to drop into a visual design for
+          needless extra “pop”.
+        </p>
 
+        <img
+          class="selected-work-image spacing-xsmall-bottom spacing-medium-top"
+          src="./assets/design-for-your-ears-2.png"
+          alt="Two final designs that started as scripts. They can easily be read from left to right, top to bottom."
+        />
+        <p aria-hidden="true" class="sec-text small-text spacing-small-bottom">
+          Two final designs that started as scripts. They can easily be read from left to right, top to bottom.
+        </p>
 
-<p>I promise designing for your ears is as good a general design practice as it is an accessibility technique. I recently shared this tip with an executive without mentioning accessibility at all. He was stoked and immediately pointed out an odd design decision he didn’t like, which, yes, happened to be woefully inaccessible for screen reader users.</p>
+        <p class="spacing-medium-top">
+          After you’ve done this a few times, you’ll run into the meanest
+          accessibility problems that absolutely need your discernment as a
+          designer to solve. You’re at Accessibility 301. Here are my best tips:
+        </p>
 
-<p>Good luck, thank you for reading, and please tell me how designing for your ears works for you.</p>
+        <ul class="spacing-small-top">
+          <li class="disc">
+            Navigation is most important. Your user needs to know where they are
+            before they can comfortably engage. A back button, for example,
+            should be read aloud first on a screen.
+          </li>
+          <li class="disc">
+            You can specify an element to be visually out of order; for example,
+            a back button at the bottom of a screen. Just flag it for your
+            engineer.
+          </li>
+          <li class="disc">
+            Draw arrows on your design if your reading order isn’t obvious. It’s
+            quick and very easy for an engineer to understand.
+          </li>
+          <li class="disc">Label your icon buttons. Always.</li>
+          <li class="disc">
+            Point out your problems. If your script is getting weird but you
+            can’t solve it for one reason or another, at the very least, point
+            it out to your engineer. They may know something to unblock you.
+            Accessibility is sometimes very challenging, but it’s better not to
+            sweep a problem under the rug.
+          </li>
+          <li class="disc">
+            Turn on VoiceOver and test other apps for script inspiration. (But
+            don’t trust they have it figured out better than you!). You can even
+            screen record things you like and add them to your engineering
+            handoff. It may give your engineer the hint they need to code
+            something better.
+          </li>
+        </ul>
 
-</div>
-  </main>
+        <p>
+          I promise designing for your ears is as good a general design practice
+          as it is an accessibility technique. I recently shared this tip with
+          an executive without mentioning accessibility at all. He was stoked
+          and immediately pointed out an odd design decision he didn’t like,
+          which, yes, happened to be woefully inaccessible for screen reader
+          users.
+        </p>
 
-  <mo-footer></mo-footer>
+        <p>
+          Good luck, thank you for reading, and please tell me how designing for
+          your ears works for you.
+        </p>
+      </div>
+    </main>
 
-</body>
-
+    <mo-footer></mo-footer>
+  </body>
 </html>
