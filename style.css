@@ -80,11 +80,24 @@ ul {
 
 /* ELEMENTS */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* Legacy IE support */
+  clip-path: inset(50%); /* Modern clipping */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
 .home-top {
-  padding-top: var(--spacing-large)
+  padding-top: var(--spacing-large);
 }
 .page-top {
-  padding-top: var(--spacing-medium)
+  padding-top: var(--spacing-medium);
 }
 
 main {
@@ -95,11 +108,11 @@ main {
 
 @media screen and (min-width: 769px) {
   .home-top {
-  padding-top: 0
-}
-.page-top {
-  padding-top: 0
-}
+    padding-top: 0;
+  }
+  .page-top {
+    padding-top: 0;
+  }
   main {
     padding-bottom: 120px;
   }
