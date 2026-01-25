@@ -137,6 +137,7 @@ footer {
     top: 0px;
     max-width: 16rem;
     overflow: scroll;
+    margin-top: -120px;
     padding-top: 120px;
   }
 
