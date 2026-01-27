@@ -89,16 +89,12 @@ ul {
 }
 
 .cta-box {
-  display: block; 
-    text-decoration: none; /* Removes the default underline from the link */
-    color: inherit;
-    border-bottom: 0px;
-    border-radius: 0.8rem;
+  display: block;
+  text-decoration: none; /* Removes the default underline from the link */
+  color: inherit;
+  border-bottom: 0px;
+  border-radius: 0.8rem;
 }
-
-
-
-
 
 a.cta-box:active,
 a.cta-box:focus {
@@ -363,7 +359,7 @@ a.interest-item:focus {
 /* Colors */
 :root {
   --background-color: #fbfbfb;
-  --cta-color: #185b50;
+  --cta-color: #50753b;
   --interest-item-1: #f64e28;
   --interest-item-2: #7d9ec9;
   --interest-item-3: #cb836d;
