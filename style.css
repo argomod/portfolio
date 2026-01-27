@@ -80,6 +80,14 @@ ul {
 
 /* ELEMENTS */
 
+.cta {
+  background:var(--container-color);
+  border-radius: 0.8rem;
+  color: var(--font-color);
+  padding: 1em;
+  font-size: var(--small-font-size);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -171,7 +179,6 @@ footer {
 .interest-item {
   color: var(--background-color) !important;
   border-radius: 0.8rem;
-  color: var(--font-color);
   padding: 1em;
   font-size: var(--small-font-size);
 }
