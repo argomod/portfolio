@@ -81,11 +81,28 @@ ul {
 /* ELEMENTS */
 
 .cta {
-  background:var(--cta-color);
+  background: var(--cta-color);
   border-radius: 0.8rem;
   color: var(--background-color);
   padding: 1em;
   font-size: var(--small-font-size);
+}
+
+.cta-box {
+  display: block; 
+    text-decoration: none; /* Removes the default underline from the link */
+    color: inherit;
+    border-bottom: 0px;
+    border-radius: 0.8rem;
+}
+
+
+
+
+
+a.cta-box:active,
+a.cta-box:focus {
+  outline-offset: 0.125rem;
 }
 
 .visually-hidden {
