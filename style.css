@@ -340,7 +340,7 @@ a.interest-item:focus {
 
 @media only screen and (min-width: 769px) {
   :root {
-    --large-font-size: 1.625rem;
+    --large-font-size: 1.75rem;
     --body-font-size: 1.25rem;
     --small-font-size: 1rem;
   }
@@ -374,7 +374,7 @@ a.interest-item:focus {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0c0c0c;
-    --cta-color: #bac2a1;
+    --cta-color: #b2daa8;
     --interest-item-1: #c6c2a9;
     --interest-item-2: #8b8393;
     --interest-item-3: #8f9ea6;
