@@ -374,7 +374,7 @@ a.interest-item:focus {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0c0c0c;
-    --cta-color: #b2daa8;
+    --cta-color: #abc4a5;
     --interest-item-1: #c6c2a9;
     --interest-item-2: #8b8393;
     --interest-item-3: #8f9ea6;
