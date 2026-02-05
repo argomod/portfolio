@@ -167,20 +167,20 @@ footer {
   }
 }
 
-.close-button {
+/* .close-button {
   position: sticky;
   top: 40px;
-}
+} */
 .close-button a:active,
 .close-button a:focus {
   outline-offset: 0.125rem;
 }
 
 @media screen and (min-width: 769px) {
-  .close-button {
+  /* .close-button {
     position: sticky;
     top: 120px;
-  }
+  } */
 }
 
 .interest-container {
